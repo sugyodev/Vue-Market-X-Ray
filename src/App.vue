@@ -1,14 +1,27 @@
 <template>
-  <div id="app">
-    <h1 class="text-6xl font-bold text-purple-600">Vue-Tailwind-Figma</h1>
+  <div id="nav">
+    <router-link to="/">Sign In</router-link> |
+    <router-link to="/signup">Sign Up</router-link>
   </div>
+  <router-view/>
 </template>
 
-<script>
-export default {
-  name: 'app',
-  components: {}
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</script>
-
-<style src="./assets/css/style.css"></style>
+#nav {
+  padding: 30px;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+</style>

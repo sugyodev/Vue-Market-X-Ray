@@ -1,44 +1,24 @@
-# Vue-Market-X-Ray
+# vue-market-x-ray
 
-Vue.js Webvie & Mobileview project from Figma Design
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+## Project setup
+```
+npm install
 ```
 
-Created file `postcss.config.js` and added:
-
-```js
-module.exports = {
-    plugins: [
-        require('tailwindcss'),
-        require('autoprefixer')
-    ]
-}
-```
-
-Deleted `postcss` entry from `package.json`
-
-```json
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-```
-
-## Compiles and hot-reloads for development
-```
-npm install -g @vue/cli-service-global
-```
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-Production Mode
+### Compiles and minifies for production
 ```
-npm build
+npm run build
 ```
 
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
