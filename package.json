@@ -8,12 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "autoprefixer": "^10",
     "core-js": "^3.8.3",
+    "font-awesome": "^4.7.0",
     "postcss": "^8",
     "tailwindcss": "^3",
     "vue": "^3.2.13",
-    "vue-router": "^4.1.5"
+    "vue-router": "^4.1.5",
+    "vue-tailwind-icons": "^0.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
