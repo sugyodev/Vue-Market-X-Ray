@@ -1,22 +1,6 @@
-# vue-tailwind-boilerplate
+# Vue-Market-X-Ray
 
-Boilerplate project for [Vue.js](https://vuejs.org/) and [Tailwind CSS](https://tailwindcss.com/) integration.
-
-## Commands used to generate this boilerplate
-
-Scaffolded project structure and development environment with command:
-
-```
-vue create vue-tailwind-boilerplate
-```
-
-Installed Tailwind CSS:
-
-```
-npm install tailwindcss
-```
-
-Created file `./assets/css/style.css` and imported Tailwind:
+Vue.js Webvie & Mobileview project from Figma Design
 
 ```css
 @tailwind base;
@@ -52,3 +36,9 @@ npm install -g @vue/cli-service-global
 ```
 npm run serve
 ```
+
+Production Mode
+```
+npm build
+```
+
