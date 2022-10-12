@@ -7,13 +7,13 @@
       name="search" id="search" placeholder="search">
   </div>
   <br />
-  <div class="mt-8 p-3 w-full inline-block mt-32 -ml-32">
-    <div class="bg-slate-100 rounded w-54 p-5 inline-block my-8">
+  <div class="mt-8 p-3 w-full inline-block mt-16 -ml-16 sm:-ml-32">
+    <div class="bg-slate-100 rounded w-54 p-5 px-10 inline-block my-8">
       Hi, I'm Mark! Let me <br /> be your nerdy review guy!
     </div>
   </div>
   <img src="images/not-found-img.png" class="inline-block" />
-  <p class="text-lg text-slate-600 mt-8">The page you are looking for doesn`t exist or an other error occurred</p>
+  <p class="text-base text-slate-600 mt-8">The page you are looking for doesn`t exist or an other error occurred</p>
 </template>
   
 <script>

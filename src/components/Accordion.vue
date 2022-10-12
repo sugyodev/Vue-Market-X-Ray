@@ -6,7 +6,7 @@
       :aria-expanded="isOpen"
       :aria-controls="`collapse${_uid}`"
     >
-      <slot name="title" />
+      <span name="title" ></span>
       <svg
         class="w-3 transition-all duration-200 transform"
         :class="{
@@ -36,6 +36,7 @@
 
 <script>
 export default {
+  name:"accordion-com",
   data() {
     return {
       isOpen: false,
