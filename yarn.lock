@@ -985,12 +985,24 @@
   "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.2.0.tgz"
   "version" "6.2.0"
 
-"@fortawesome/fontawesome-svg-core@^6.2.0":
+"@fortawesome/fontawesome-svg-core@^6.2.0", "@fortawesome/fontawesome-svg-core@~1 || >=1.3.0-beta1":
   "integrity" "sha512-Cf2mAAeMWFMzpLC7Y9H1I4o3wEU+XovVJhTiNG8ZNgSQj53yl7OCJaS80K4YjrABWZzbAHVaoHE1dVJ27AAYXw=="
   "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.2.0.tgz"
   "version" "6.2.0"
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.2.0"
+
+"@fortawesome/free-solid-svg-icons@^6.2.0":
+  "integrity" "sha512-UjCILHIQ4I8cN46EiQn0CZL/h8AwCGgR//1c4R96Q5viSRwuKVo0NdQEc4bm+69ZwC0dUvjbDqAHF1RR5FA3XA=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.2.0.tgz"
+  "version" "6.2.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.2.0"
+
+"@fortawesome/vue-fontawesome@^3.0.0-5":
+  "integrity" "sha512-aNmBT4bOecrFsZTog1l6AJDQHPP3ocXV+WQ3Ogy8WZCqstB/ahfhH4CPu5i4N9Hw0MBKXqE+LX+NbUxcj8cVTw=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.0-5.tgz"
+  "version" "3.0.0-5"
 
 "@hapi/hoek@^9.0.0":
   "integrity" "sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ=="
@@ -1003,6 +1015,16 @@
   "version" "5.1.0"
   dependencies:
     "@hapi/hoek" "^9.0.0"
+
+"@headlessui/vue@^1.7.3":
+  "integrity" "sha512-Is4iakKts9u9E0+jEZNzoJpBjwq2SamwEIoEl2RlyYSu6Zco536GsPXaQEfg/o7Eyc1GUUlcL+dJd4Rt7qyf7A=="
+  "resolved" "https://registry.npmjs.org/@headlessui/vue/-/vue-1.7.3.tgz"
+  "version" "1.7.3"
+
+"@heroicons/vue@^2.0.12":
+  "integrity" "sha512-ypuQl/Wei7BoShO65AdRVikXDaSt6hJBRuKs2pVd/6HvxfEz18oXraH+J5G/QPIwObMEVhMb6nkOs9l3WZv/gA=="
+  "resolved" "https://registry.npmjs.org/@heroicons/vue/-/vue-2.0.12.tgz"
+  "version" "2.0.12"
 
 "@humanwhocodes/config-array@^0.5.0":
   "integrity" "sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg=="
@@ -1591,6 +1613,15 @@
     "postcss" "^8.4.14"
     "source-map" "^0.6.1"
 
+"@vue/compiler-sfc@2.7.12":
+  "integrity" "sha512-7FOITA2+4ND7lMAfegljHBpNSG3X9mVzgQwcS3g928QZM1EADedUw2JLKcgOm1ZEJEkvyDHh6lwa08vrLmoCOA=="
+  "resolved" "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-2.7.12.tgz"
+  "version" "2.7.12"
+  dependencies:
+    "@babel/parser" "^7.18.4"
+    "postcss" "^8.4.14"
+    "source-map" "^0.6.1"
+
 "@vue/compiler-sfc@3.2.40":
   "integrity" "sha512-tzqwniIN1fu1PDHC3CpqY/dPCfN/RN1thpBC+g69kJcrl7mbGiHKNwbA6kJ3XKKy8R6JLKqcpVugqN4HkeBFFg=="
   "resolved" "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.2.40.tgz"
@@ -1699,6 +1730,11 @@
   "integrity" "sha512-Iu8Tbg3f+emIIMmI2ycSI8QcEuAUgPTgHwesDU1eKMLE4YC/c/sFbGc70QgMq31ijRftV0R7vCm9co6rldCeOA=="
   "resolved" "https://registry.npmjs.org/@vue/web-component-wrapper/-/web-component-wrapper-1.3.0.tgz"
   "version" "1.3.0"
+
+"@vueform/slider@^2.1.5":
+  "integrity" "sha512-bwl9IG7iT2+QhEkW9pvqq3s5bYXzImCzRA9TgaCIqcllXZKSOTqgHQ2oaiy0qNs7VEGvhADr4DtB+/VlhCGhDQ=="
+  "resolved" "https://registry.npmjs.org/@vueform/slider/-/slider-2.1.5.tgz"
+  "version" "2.1.5"
 
 "@webassemblyjs/ast@1.11.1":
   "integrity" "sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw=="
@@ -2562,7 +2598,7 @@
   dependencies:
     "browserslist" "^4.21.4"
 
-"core-js@^3.8.3":
+"core-js@^3.8.3", "core-js@^3.9.0":
   "integrity" "sha512-nbm6eZSjm+ZuBQxCUPQKQCoUEfFOXjUZ8dTTyikyKaWrTYmAVbykQfwsKE5dBK88u3QCkCrzsx/PPlKfhsvgpw=="
   "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.25.5.tgz"
   "version" "3.25.5"
@@ -6184,7 +6220,7 @@
   "resolved" "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@*", "vue@^2 || ^3.2.13", "vue@^3.2.0", "vue@^3.2.13", "vue@3.2.40":
+"vue@*", "vue@^2 || ^3.2.13", "vue@^3.0.5", "vue@^3.2.0", "vue@^3.2.13", "vue@>= 3", "vue@>= 3.0.0 < 4", "vue@3.2.40":
   "integrity" "sha512-1mGHulzUbl2Nk3pfvI5aXYYyJUs1nm4kyvuz38u4xlQkLUn1i2R7nDbI4TufECmY8v1qNBHYy62bCaM+3cHP2A=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.2.40.tgz"
   "version" "3.2.40"
@@ -6202,6 +6238,26 @@
   dependencies:
     "@vue/compiler-sfc" "2.7.11"
     "csstype" "^3.1.0"
+
+"vue@^2.6.10":
+  "integrity" "sha512-yRS44vPsCj6b5IZQHdEYqIwnay8stCnL8RsaVsm5aGtOhka00aoG+3ybaBAELDsXtNlzECe8myb2ukdzn19IOg=="
+  "resolved" "https://registry.npmjs.org/vue/-/vue-2.7.12.tgz"
+  "version" "2.7.12"
+  dependencies:
+    "@vue/compiler-sfc" "2.7.12"
+    "csstype" "^3.1.0"
+
+"vue3-circle-progress@^1.0.7":
+  "integrity" "sha512-Z916xKQhuEcaOvwIfCFUX9r/gPUNd40G2aJbROcRtotm5FE4dZPP4S4iDEISexE9XMF813swkdc5VzCdFxfE8g=="
+  "resolved" "https://registry.npmjs.org/vue3-circle-progress/-/vue3-circle-progress-1.0.7.tgz"
+  "version" "1.0.7"
+
+"vuejs-overlay@^0.0.28":
+  "integrity" "sha512-J4ftEu2N6lA+54qlIoLNbJURAlq2X1gpdDSWdi18d5uC54Z1DC2npzK2zu9euf+rQTitSMQ5cWCr4f38jWHyLw=="
+  "resolved" "https://registry.npmjs.org/vuejs-overlay/-/vuejs-overlay-0.0.28.tgz"
+  "version" "0.0.28"
+  dependencies:
+    "vue" "^2.6.10"
 
 "vueperslides@^3.4.2":
   "integrity" "sha512-q3QNFx47RoWaoAgCdeouD51WtSC1zgX4V9NFdNAMTuvqFDII6Arxr45w1NWCMKpoHjh5OZ32LefrYetu27GMEA=="

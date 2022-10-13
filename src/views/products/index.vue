@@ -1,5 +1,18 @@
 <template>
-  <div class="p-4 sm:px-24">
+  <div v-if="openAddreview" class="add-review absolute sm:p-20 p-2 sm:w-full">
+    <div class="grid grid-cols-2">
+      <button class="text-2xl font-bold" @click="openAddreview=!openAddreview">Reviews</button>
+      <div class="text-right"><img src="images/about-img-2.png" class="float-right" /></div>
+    </div>
+    <div>
+      <h1 class="w-full text-3xl">Write Review</h1>
+      <img src="images/rate.png" class="w-auto m-4" />
+      <input class="p-2 bg-slate-100 rounded w-full my-3" placeholder="Smith" />
+      <textarea placeholder="Add a component" class="p-4 bg-slate-100 rounded w-full my-2 h-48"></textarea>
+    </div>
+    <button class="p-4 text-white text-lg bg-sky-600 rounded w-full mt-32">Proceed</button>
+  </div>
+  <div v-else class="p-4 sm:px-24">
     <div class="absolute w-full sm:w-1/2 sm:right-0 sm:mt-8 mr-4">
       <img src="images/percent.png" class="inline-block float-left" />
       <img src="images/about-img-2.png" class="inline-block float-right" />
@@ -56,15 +69,17 @@
           </li>
         </ul>
         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-          <div class="px-4 py-5 flex-auto">
+          <div class="sm:px-4 py-5 flex-auto">
             <div class="tab-content tab-space">
               <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
+                <Detail />
               </div>
               <div v-bind:class="{'hidden': openTab !== 2, 'block': openTab === 2}">
                 <Spec :spec="specs" />
               </div>
               <div v-bind:class="{'hidden': openTab !== 3, 'block': openTab === 3}">
-                <button class="w-full rounded py-2 px-4 bg-sky-600 text-white">Add Review</button>
+                <button class="w-full rounded py-2 px-4 bg-sky-600 text-white" @click="openAddreview=!openAddreview">Add
+                  Review</button>
                 <div v-for="item in reviews" v-bind:key="item.id">
                   <Review :review="item" />
                 </div>
@@ -80,11 +95,13 @@
 <script>
 import Review from '../../components/Review.vue'
 import Spec from '../../components/Spec.vue'
+import Detail from '../../components/Detail.vue'
 export default {
   name: 'product-page',
   components: {
     Review,
-    Spec
+    Spec,
+    Detail
   },
   props: {
     msg: String
@@ -92,6 +109,7 @@ export default {
   data() {
     return {
       openTab: 1,
+      openAddreview: false,
       reviews: [
         {
           id: 1, username: "Smith Smith", date: "July 13, 2022", reviewcontent: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"

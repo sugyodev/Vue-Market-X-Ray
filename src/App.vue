@@ -4,8 +4,17 @@
     <router-link to="/signup">Sign Up</router-link>
   </div> -->
   <router-view/>
-</template>
+  <Footer />
 
+</template>
+<script>
+import Footer from './components/Footer.vue'
+export default {
+  components: {
+    Footer
+  },
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

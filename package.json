@@ -9,6 +9,11 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/vue-fontawesome": "^3.0.0-5",
+    "@headlessui/vue": "^1.7.3",
+    "@heroicons/vue": "^2.0.12",
+    "@vueform/slider": "^2.1.5",
     "autoprefixer": "^10",
     "core-js": "^3.8.3",
     "flowbite": "^1.5.3",
@@ -19,6 +24,8 @@
     "vue-carousel": "^0.18.0",
     "vue-router": "^4.1.5",
     "vue-tailwind-icons": "^0.1.2",
+    "vue3-circle-progress": "^1.0.7",
+    "vuejs-overlay": "^0.0.28",
     "vueperslides": "^3.4.2"
   },
   "devDependencies": {
