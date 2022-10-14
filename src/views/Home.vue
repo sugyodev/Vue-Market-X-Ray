@@ -1,5 +1,5 @@
 <template>
-  <div class="home px-4 sm:px-16 sm:w-full">
+  <div class="home px-4 sm:px-16 w-full py-6">
     <div class="w-full justify-between flex">
       <div class="w-11/12 mr-2">
         <img src="images/search-icon.png" class="sm:relative sm:left-0 sm:top-11 absolute left-4 top-16 inset-y-0 pl-4 flex my-2.5 pt-1"/>

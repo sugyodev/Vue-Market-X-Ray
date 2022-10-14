@@ -5,7 +5,7 @@
   </div> -->
   <Header v-if="layout!=='auth'" :openSidebar="openSidebar" @toggleSidebar="toggleSidebar"/>
   <div class="flex">
-    <Sidebar :openSidebar="openSidebar" />
+    <!-- <Sidebar :openSidebar="openSidebar" /> -->
     <router-view />
   </div>
   <Footer v-if="layout!=='auth'" />
@@ -14,12 +14,12 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import Sidebar from './components/Sidebar.vue'
+// import Sidebar from './components/Sidebar.vue'
 export default {
   components: {
     Footer,
     Header,
-    Sidebar
+    // Sidebar
   },
   computed: {
     layout: function () {

@@ -1,5 +1,5 @@
 <template>
-  <div class="sign-in py-16">
+  <div class="sign-in py-16 w-full">
     <p class="text-center text-3xl">Sign In</p>
     <p class="text-center text-lg mt-3">Login in with your account</p>
     <div class="flex items-center w-full">

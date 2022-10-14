@@ -1,5 +1,5 @@
 <template>
-  <div class="sign-in py-16">
+  <div class="sign-in py-16  w-full">
     <p class="text-center text-4xl">Sign Up</p>
     <p class="text-center text-xl mt-3">Make your account</p>
     <div class="flex items-center w-full">
@@ -31,7 +31,7 @@
               <option value="value2" selected>+380</option>
               <option value="value3">+44</option>
             </select>
-            <input class="w-3/4 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 text-lg" type="text"
+            <input class="w-3/4 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 text-md" type="text"
               name="phnoenumber" id="phnoenumber" placeholder="Phone Number">
           </div>
           <button

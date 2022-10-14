@@ -22,48 +22,48 @@
         <img src="images/product-pc-icon.png" />
       </div>
       <div class="grid grid-rows-2xl sm:mt-36 mt-2">
-        <p class="sm:p-24 p-2">
+        <p class="sm:p-24 p-2 text-sm">
           Screen 15.6" IPS (1920x1080) Full HD, matte / AMD Ryzen 5 5500U (2.1 — 4.0 GHz) / RAM 8 GB / SSD 512 GB /
           nVidia
           GeForce GTX 1650, 4 GB / without OD / LAN / Wi-Fi / Bluetooth / webcam / without OS / 2.15 kg / black
         </p>
         <div class="price grid grid-cols-3 h-12 mt-2">
           <div class="grid-rows-2 ">
-            <p>Lowest Price</p>
-            <strong class="font-bold text-lg">$1130</strong>
+            <p class="text-xs">Lowest Price</p>
+            <strong class="font-bold text-2xl">$1130</strong>
           </div>
-          <div class="bg-slate-100 pt-3 rounded"><img src="images/amazon-icon.png"
-              class="inline-block mr-2"><span>$1140</span></div>
-          <div class="bg-slate-100 pt-3 rounded"><img src="images/ebay-icon.png"
+          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/amazon-icon.png"
+              class="inline-block mr-2"><span class="text-[#3F37C9]">$1140</span></div>
+          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/ebay-icon.png"
               class="inline-block mr-2"><span>$1130</span></div>
         </div>
       </div>
     </div>
 
     <div class="text-left m-3">
-      <input type="checkbox" class="left-0 mr-4" /><span>Notify me on price drop of this product</span>
+      <input type="checkbox" class="left-0 mr-2 h-4 w-4" /><span class="text-sm">Notify me on price drop of this product</span>
     </div>
     <div class="tab flex flex-wrap mt-2">
       <div class="w-full">
         <ul class="flex mb-0 list-none flex-wrap flex-row rounded">
           <li class="-mb-px last:mr-0 flex-auto text-center">
-            <a class="text-sm font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal"
+            <a class="text-sm font-bold px-5 py-3 m-1 shadow-lg rounded-lg block leading-normal"
               v-on:click="toggleTabs(1)"
-              v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 1, 'text-white bg-indigo-800': openTab === 1}">
+              v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 1, 'text-white bg-[#3F37C9]': openTab === 1}">
               Details
             </a>
           </li>
           <li class="-mb-px last:mr-0 flex-auto text-center">
-            <a class="text-sm font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal"
+            <a class="text-sm font-bold px-5 py-3 m-1 shadow-lg rounded-lg block leading-normal"
               v-on:click="toggleTabs(2)"
-              v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 2, 'text-white bg-indigo-800': openTab === 2}">
+              v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 2, 'text-white bg-[#3F37C9]': openTab === 2}">
               Spec
             </a>
           </li>
           <li class="-mb-px last:mr-0 flex-auto text-center">
-            <a class="text-sm font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal"
+            <a class="text-sm font-bold px-5 py-3 m-1 shadow-lg rounded-lg block leading-normal"
               v-on:click="toggleTabs(3)"
-              v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 3, 'text-white bg-indigo-800': openTab === 3}">
+              v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 3, 'text-white bg-[#3F37C9]': openTab === 3}">
               Reviews
             </a>
           </li>

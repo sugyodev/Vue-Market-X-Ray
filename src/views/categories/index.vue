@@ -3,24 +3,26 @@
     <transition name="fade">
       <div v-if="isModalVisible">
         <div @click="onToggle" class="absolute bg-black opacity-70 inset-0 z-20"></div>
-        <div class="w-full sm:w-1/2 px-8 fixed bottom-48 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
-          <div class="p-4 px-8 bg-white rounded w-2/3 rounded-lg mb-4 msg-box">
-            I think  these are the best for you
+        <div
+          class="w-full sm:w-1/3 px-8 fixed bottom-48 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
+          <div class="py-4 px-6 bg-white rounded w-48 rounded-lg mb-4 text-sm msg-box sm:ml-8">
+            I think these are <br />the best for you
           </div>
-          <img src="images/product-logo-icon.png" class="float-right h-48 cursor-pointer"/>
+          <img src="images/product-logo-icon.png" class="float-right h-48 cursor-pointer" />
         </div>
       </div>
     </transition>
   </div>
-  <div class="jastify-center w-full pl-3 p-8 text-left pt-12 border-0 sm:p-16">
+  <div class="jastify-center w-full px-3 text-left border-0 sm:p-8">
     <div class="flex justify-between">
-      <button class=" text-violet-400 text-3xl sm:text-5xl font-bold">Smart Phones</button>
-      <img src="images/about-img-2.png" class="float-right sm:mr-12 cursor-pointer" @click="gowizard">
+      <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-10 ml-1" />
+      <button class=" text-[#866FAC] text-xl sm:text-5xl font-bold w-3/4 text-left ml-8">Smart Phones</button>
+      <img src="images/logo-icon.png" class="float-right sm:mr-24 cursor-pointer" @click="gowizard">
     </div>
     <div class="w-full sm:grid sm:grid-cols-2 ">
       <div class="sort"></div>
       <div class="sort float-right flex justify-between">
-        <Listbox as="div" v-model="selected" class="inline-block w-32 sm:w-1/2 mb-1 mr-2">
+        <Listbox as="div" v-model="selected" class="inline-block w-40 sm:w-1/2 mb-4 mr-2 sm:mr-0">
           <div class="relative mt-1">
             <ListboxButton
               class="relative w-full cursor-default rounded-md border border-gray-300 bg-slate-100 py-2 pl-3 pr-10 text-left shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm">
@@ -55,15 +57,16 @@
             </transition>
           </div>
         </Listbox>
-        <div class="sm:mr-64">
+        <div class="sm:mr-24 md:mr-48">
           <img src="images/sort-icon.png"
             class="inline-block h-10 p-2 bg-slate-100 rounded border-solid border-2 border-slate-300 mt-1" />
         </div>
       </div>
     </div>
-    <div class="sm:ml-8">
-      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-1/5 m-2 inline-block cursor-pointer" @click="goproduct">
-        <Card :product="p"/>
+    <div>
+      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-2/5 my-1 sm:mx-4 inline-block cursor-pointer" 
+        @click="goproduct">
+        <Card :product="p" />
       </div>
     </div>
   </div>
@@ -76,19 +79,15 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 const people = [
   {
     id: 1,
-    name: 'sort by',
+    name: 'Sort by',
   },
   {
     id: 2,
-    name: 'A',
+    name: 'Price',
   },
   {
     id: 3,
-    name: 'D',
-  },
-  {
-    id: 4,
-    name: 'T',
+    name: 'X Rank',
   },
 ]
 
@@ -106,14 +105,14 @@ export default {
       return this.isOpen;
     }
   },
-  methods:{
+  methods: {
     onToggle() {
       this.isOpen = !this.isOpen;
     },
-    gowizard: function(){
+    gowizard: function () {
       this.$router.push('/wizard');
     },
-    goproduct: function(){
+    goproduct: function () {
       this.$router.push('/product');
     }
   },
@@ -122,31 +121,31 @@ export default {
       isOpen: true,
       products: [
         {
-          no: 1, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 97
         },
         {
-          no: 2, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 97
         },
         {
-          no: 3, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 97
         },
         {
-          no: 4, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 97
         },
         {
-          no: 5, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 97
         },
         {
-          no: 6, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 97
         },
         {
-          no: 7, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 97
         },
         {
-          no: 8, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 97
         },
         {
-          no: 9, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 97
         }
       ]
     }
@@ -156,5 +155,6 @@ export default {
     
     <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
 </style>
     

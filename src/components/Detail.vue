@@ -1,22 +1,22 @@
 <template>
   <div class="detail">
-    <p class="text-xl text-violet-800 font-bold text-left">
+    <p class="text-2xl text-[#866FAC] font-bold text-left">
       My AI engine read 1,289 user’s reviews and this is the what they had to say:
     </p>
 
     <div class="flex justify-between">
       <div class=" pt-10 pl-4 text-left">
-        <p class="text-xl text-violet-800 font-bold text-left mb-2">X score</p>
-        <p>#3 in <span class="text-sky-500">Computer</span></p>
-        <p>#1 in <span class="text-sky-500">Laptops</span></p>
+        <p class="text-xl text-[#866FAC] font-bold text-left mb-2">X score</p>
+        <p class="text-sm">#3 in <span class="text-[#449dd1]">Computers</span></p>
+        <p class="text-sm">#1 in <span class="text-[#449dd1]">Laptops</span></p>
       </div>
       <div>
-        <circle-progress :percent="90" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="100" :border-width="20"
+        <circle-progress :percent="90" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
           :border-bg-width="0" :show-percent="true" />
       </div>
     </div>
-    <div class="flex justify-between">
-      <div class="pt-10 pl-4 text-xl text-violet-800 font-bold text-left mb-2">
+    <div class="flex justify-between mt-4">
+      <div class="pt-10 pl-4 text-xl text-[#866FAC] font-bold text-left mb-2">
         Category Comparison
       </div>
       <div>
@@ -25,13 +25,13 @@
     </div>
 
     <div class="flex justify-between">
-      <div class="pt-10 pl-4 text-xl text-violet-800 font-bold text-left mb-2 w-3/5">
+      <div class="pt-10 text-xl text-[#866FAC] font-bold text-left mb-2 w-1/2">
         Ask Anything
       </div>
-      <div class="mb-6 md:w-full pt-9 mr-2">
+      <div class="mb-6 md:w-full pt-9 mr-2 w-52">
         <input
-          class="w-full h-10 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 border text-lg px-2 pr-10"
-          type="search" name="search" id="search" placeholder="anyword of interest?">
+          class="w-full h-10 border rounded-lg p-4 outline-none focus:shadow-outline bg-[#F7F8FC] border text-base pr-8"
+          type="search" name="search" id="search" placeholder="Any word of interest?">
         <div class="left-0 inset-y-0 pl-3 -mt-8 ml-44 flex my-2.5 relative float-right mr-3">
           <svg class="fill-current h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path
@@ -41,9 +41,70 @@
       </div>
     </div>
 
+    <div class="flex justify-between">
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Network</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Design</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Size</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Bluetooth</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Memory</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Upgrade</button>
+    </div>
+    <button class="text-left w-full text-[#866FAC] text-xs ml-2">*Common users’s interest</button>
+
+    <div class="grid grid-rows-4">
+      <div class="flex justify-between w-full m-1 my-3">
+        <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+          Battery life
+        </div>
+        <div class="w-2/3">
+          <span class="inline-block mr-2 text-[#00BF04] text-sm">99%</span>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+            <div class="bg-[#00BF04] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+              style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between w-full m-1 my-3">
+      <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+        Design 
+      </div>
+      <div class="w-2/3">
+        <span class="inline-block mr-2 text-[#FFB543] text-sm">76%</span>
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+          <div class="bg-[#FFB543] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+            style="width: 76%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between w-full m-1 my-3">
+      <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+        Network
+      </div>
+      <div class="w-2/3">
+        <span class="inline-block mr-2 text-[#FF7A00] text-sm">48%</span>
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+          <div class="bg-[#FF7A00] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+            style="width: 48%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between w-full m-1 my-3">
+      <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+        Call Quality
+      </div>
+      <div class="w-2/3">
+        <span class="inline-block mr-2 text-[#FF2E00] text-sm">22%</span>
+        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+          <div class="bg-[#FF2E00] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+            style="width: 22%"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+
     <div class="flex justify-between px-4 pt-4">
       <div>
-        <p>Lowest Price</p>
+        <p class="text-xs">Lowest Price</p>
         <p class="text-2xl font-bold">$1130</p>
       </div>
       <div class="w-3/5">
@@ -64,60 +125,60 @@
 
     <div class="flex justify-between pt-4">
       <div class="text-left">
-        <p class="text-indigo-400 font-bold text-lg">Reviews</p>
+        <p class="text-[#866FAC] font-bold text-lg">Reviews</p>
       </div>
       <div class="text-right">
-        <p class="text-indigo-400 cursor-pointer">View All</p>
+        <p class="text-[#866FAC] cursor-pointer">View All</p>
       </div>
     </div>
     <div class="mt-2 w-full grid sm:grid-cols-4 grid-cols-2">
-      <div class="grid grid-rows-2 m-1 bg-slate-100 rounded p-2">
-          <div class="flex justify-between">
-            <div>
-              <img src="images/avatar-2.png">
-            </div>
-            <div class="text-left">
-              <p>Smith Smith</p>
-              <img src="images/amazon-icon.png">
-            </div>
+      <div class="grid grid-rows-2 m-1 bg-[#F7F8FC] rounded-lg p-4 px-1 gap-4">
+        <div class="flex justify-between">
+          <div class="w-1/3">
+            <img src="images/avatar-2.png">
           </div>
-          <div>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+          <div class="text-left w-2/3">
+            <p>Smith Smith</p>
+            <img src="images/amazon-icon.png">
           </div>
         </div>
-      <div class="grid grid-rows-2 m-1 bg-slate-100 rounded p-2">
-          <div class="flex justify-between">
-            <div>
-              <img src="images/avatar-2.png">
-            </div>
-            <div class="text-left">
-              <p>Smith Smith</p>
-              <img src="images/amazon-icon.png">
-            </div>
+        <div class="text-sm text-left">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+        </div>
+      </div>
+      <div class="grid grid-rows-2 m-1 bg-[#F7F8FC] rounded-lg p-4 px-1 gap-4">
+        <div class="flex justify-between">
+          <div class="w-1/3">
+            <img src="images/avatar-2.png">
           </div>
-          <div>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+          <div class="text-left w-2/3">
+            <p>Smith Smith</p>
+            <img src="images/amazon-icon.png">
           </div>
         </div>
+        <div class="text-sm text-left">
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit”
+        </div>
+      </div>
     </div>
     <div class="flex justify-between pt-4">
       <div class="text-left">
-        <p class="text-indigo-400 font-bold text-lg">Similar Products</p>
+        <p class="text-[#866FAC] font-bold text-lg">Similar Products</p>
       </div>
       <div class="text-right">
-        <p class="text-indigo-400 cursor-pointer">View All</p>
+        <p class="text-[#866FAC] cursor-pointer">View All</p>
       </div>
     </div>
     <div class="mt-2 w-full grid sm:grid-cols-4 grid-cols-2">
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <img src="images/avatar-2.png" class="m-1" />
+        <img src="images/recommend-icon.png" class="m-1" />
         <img src="images/favorite-device-icon.png" class="m-1" />
-        <img src="images/avatar-2.png" class="m-1" />
+        <img src="images/heart-icon.png" class="m-1" />
       </div>
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <img src="images/avatar-2.png" class="m-1" />
+        <img src="images/recommend-icon.png" class="m-1" />
         <img src="images/favorite-device-icon.png" class="m-1" />
-        <img src="images/avatar-2.png" class="m-1" />
+        <img src="images/heart-icon.png" class="m-1" />
       </div>
     </div>
   </div>
@@ -144,7 +205,7 @@ export default {
 </script>
 <style>
 .current-counter {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
 }
 </style>
