@@ -6,7 +6,7 @@ import Category from "@/views/categories/index.vue";
 import Wizard from "@/views/Wizard.vue";
 import Product from "@/views/products";
 import About from "@/views/About.vue";
-import Chart from "@/components/Chart.vue";
+// import Chart from "@/components/Chart.vue";
 import Favorite from "@/views/favorites/Favorite.vue";
 import PageNotFound from "@/views/PageNotFound.vue";
 
@@ -51,11 +51,11 @@ const routes = [
     component: About,
     layout: 'welcome'
   },
-  {
-    path: "/chart",
-    component: Chart,
-    layout: 'welcome'
-  },
+  // {
+  //   path: "/chart",
+  //   component: Chart,
+  //   layout: 'welcome'
+  // },
   {
     path: '/:pathMatch(.*)*',
     component: PageNotFound,
