@@ -14,7 +14,7 @@
       </div>
     </transition>
   </div>
-  <div class="wizard-page p-2 sm:px-12 px-1 w-full">
+  <div class="wizard-page py-6 sm:px-12 px-1 w-full">
     <div class="flex justify-between">
       <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-2 ml-1" />
       <span class="inline-block w-3/4 text-2xl sm:text text-left ml-8 text-[#866FAC] font-bold"> Looking for a new
@@ -66,7 +66,9 @@ export default {
       data2: 1,
       isOpen: true,
       value1: 20,
-      value2: 15
+      value2: 15,
+      TopScroll: window.pageYOffset || document.documentElement.scrollTop,
+      LeftScroll: window.pageXOffset || document.documentElement.scrollLeft,
     }
   },
   methods: {
@@ -97,6 +99,12 @@ export default {
     },
     onToggle() {
       this.isOpen = !this.isOpen;
+      window.onscroll = function () { };
+    },
+    functiondisable() {
+      window.onscroll = function () {
+        window.scrollTo(this.LeftScroll, this.TopScroll);
+      };
     },
     gocategory() {
       this.$router.push('/category');
@@ -106,6 +114,9 @@ export default {
     isModalVisible() {
       return this.isOpen;
     },
+  },
+  mounted: function () {
+    this.functiondisable();
   },
 }
 </script>

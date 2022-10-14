@@ -5,7 +5,7 @@
       <img src="images/about-img-2.png" class="float-right sm:mr-12">
     </div>
     <div class="sm:ml-8">
-      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-1/5 m-2 inline-block">
+      <div v-for="p in products" v-bind:key="p.no" class="w-full inline-block">
         <Card :product="p" />
       </div>
     </div>

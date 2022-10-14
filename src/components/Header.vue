@@ -4,7 +4,7 @@
     <div class="inline-block text-center">
       <img src="images/header-icon.png" class="w-auto inline-block"/>
     </div>
-    <div class="inline-block text-right">
+    <div class="inline-block text-right cursor-pointer">
       <img src="images/header-upload-icon.png" class="w-auto inline-block"/>
     </div>
   </div>

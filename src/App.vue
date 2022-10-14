@@ -3,9 +3,9 @@
     <router-link to="/">Sign In</router-link> |
     <router-link to="/signup">Sign Up</router-link>
   </div> -->
-  <Header v-if="layout!=='auth'" :openSidebar="openSidebar" @toggleSidebar="toggleSidebar"/>
+  <Header v-if="layout!=='auth'" :openSidebar="openSidebar" @toggleSidebar="toggleSidebar" />
   <div class="flex">
-    <!-- <Sidebar :openSidebar="openSidebar" /> -->
+    <Sidebar v-if="layout!=='auth'" :openSidebar="openSidebar" @disableSidebar="disableSidebar"/>
     <router-view />
   </div>
   <Footer v-if="layout!=='auth'" />
@@ -14,12 +14,12 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-// import Sidebar from './components/Sidebar.vue'
+import Sidebar from './components/Sidebar.vue'
 export default {
   components: {
     Footer,
     Header,
-    // Sidebar
+    Sidebar
   },
   computed: {
     layout: function () {
@@ -28,12 +28,15 @@ export default {
   },
   data: function () {
     return {
-      openSidebar: true,
+      openSidebar: false,
     };
   },
   methods: {
     toggleSidebar: function () {
       this.openSidebar = !this.openSidebar;
+    },
+    disableSidebar: function () {
+      this.openSidebar = false;
     },
     handleResize: function () {
       window.innerWidth <= 1000 && (this.openSidebar = false);

@@ -52,7 +52,8 @@
               </div>
             </div>
             <button
-              class="mb-4 md:mb-4 sm:w-1/2 bg-blue-500 border w-full px-5 py-3 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600" @click="onToggle">
+              class="mb-4 md:mb-4 sm:w-1/2 bg-blue-500 border w-full px-5 py-3 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600"
+              @click="onToggle">
               Show Results
             </button>
           </div>
@@ -130,7 +131,9 @@ export default {
             { cno: 5, name: '|”- 12.5”', actived: false },
           ], active: false
         }
-      ]
+      ],
+      TopScroll: window.pageYOffset || document.documentElement.scrollTop,
+      LeftScroll: window.pageXOffset || document.documentElement.scrollLeft,
     };
   },
   computed: {
@@ -141,9 +144,15 @@ export default {
   methods: {
     onToggle() {
       this.isOpen = !this.isOpen;
+      this.isOpen ? this.functiondisable() : window.onscroll = function () { };
     },
     select(ino, cno) {
       this.items[ino].content[cno].actived = !this.items[ino].content[cno].actived;
+    },
+    functiondisable() {
+      window.onscroll = function () {
+        window.scrollTo(this.LeftScroll, this.TopScroll);
+      };
     }
   }
 }

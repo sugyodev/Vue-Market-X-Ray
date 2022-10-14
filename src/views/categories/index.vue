@@ -59,12 +59,12 @@
         </Listbox>
         <div class="sm:mr-24 md:mr-48">
           <img src="images/sort-icon.png"
-            class="inline-block h-10 p-2 bg-slate-100 rounded border-solid border-2 border-slate-300 mt-1" />
+            class="inline-block sm:h-[38px] p-2 h-[42px] w-[42px] sm:w-[38px] bg-slate-100 rounded border-solid border-2 border-slate-300 mt-1" />
         </div>
       </div>
     </div>
     <div>
-      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-2/5 my-1 sm:mx-4 inline-block cursor-pointer" 
+      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-2/5 my-1 sm:mx-4 inline-block cursor-pointer"
         @click="goproduct">
         <Card :product="p" />
       </div>
@@ -108,16 +108,27 @@ export default {
   methods: {
     onToggle() {
       this.isOpen = !this.isOpen;
+      window.onscroll = function () { };
     },
     gowizard: function () {
       this.$router.push('/wizard');
     },
     goproduct: function () {
       this.$router.push('/product');
+    },
+    functiondisable() {
+      window.onscroll = function () {
+        window.scrollTo(this.LeftScroll, this.TopScroll);
+      };
     }
+  },
+  mounted: function () {
+    this.functiondisable();
   },
   data() {
     return {
+      TopScroll: window.pageYOffset || document.documentElement.scrollTop,
+      LeftScroll: window.pageXOffset || document.documentElement.scrollLeft,
       isOpen: true,
       products: [
         {

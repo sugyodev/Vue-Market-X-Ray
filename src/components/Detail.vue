@@ -42,12 +42,12 @@
     </div>
 
     <div class="flex justify-between">
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Network</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Design</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Size</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Bluetooth</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Memory</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 m-1 text-[#282828]">Upgrade</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Network</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Design</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Size</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Bluetooth</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Memory</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Upgrade</button>
     </div>
     <button class="text-left w-full text-[#866FAC] text-xs ml-2">*Common users’s interest</button>
 
@@ -65,41 +65,41 @@
         </div>
       </div>
       <div class="flex justify-between w-full m-1 my-3">
-      <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
-        Design 
-      </div>
-      <div class="w-2/3">
-        <span class="inline-block mr-2 text-[#FFB543] text-sm">76%</span>
-        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
-          <div class="bg-[#FFB543] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
-            style="width: 76%"></div>
+        <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+          Design
+        </div>
+        <div class="w-2/3">
+          <span class="inline-block mr-2 text-[#FFB543] text-sm">76%</span>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+            <div class="bg-[#FFB543] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+              style="width: 76%"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex justify-between w-full m-1 my-3">
-      <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
-        Network
-      </div>
-      <div class="w-2/3">
-        <span class="inline-block mr-2 text-[#FF7A00] text-sm">48%</span>
-        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
-          <div class="bg-[#FF7A00] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
-            style="width: 48%"></div>
+      <div class="flex justify-between w-full m-1 my-3">
+        <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+          Network
+        </div>
+        <div class="w-2/3">
+          <span class="inline-block mr-2 text-[#FF7A00] text-sm">48%</span>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+            <div class="bg-[#FF7A00] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+              style="width: 48%"></div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="flex justify-between w-full m-1 my-3">
-      <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
-        Call Quality
-      </div>
-      <div class="w-2/3">
-        <span class="inline-block mr-2 text-[#FF2E00] text-sm">22%</span>
-        <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
-          <div class="bg-[#FF2E00] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
-            style="width: 22%"></div>
+      <div class="flex justify-between w-full m-1 my-3">
+        <div class="text-left w-1/3 text-[#866FAC] text-sm ml-2">
+          Call Quality
+        </div>
+        <div class="w-2/3">
+          <span class="inline-block mr-2 text-[#FF2E00] text-sm">22%</span>
+          <div class="w-full bg-gray-200 rounded-full dark:bg-gray-700 inline-block w-2/3">
+            <div class="bg-[#FF2E00] text-xs font-medium text-blue-100 text-center p-0.5 pt-2 leading-none rounded-full"
+              style="width: 22%"></div>
+          </div>
         </div>
       </div>
-    </div>
     </div>
 
     <div class="flex justify-between px-4 pt-4">
@@ -108,15 +108,15 @@
         <p class="text-2xl font-bold">$1130</p>
       </div>
       <div class="w-3/5">
-        <button class="bg-green-500 text-white px-4 py-2 rounded-lg w-full h-full">Buy Now</button>
+        <button class="bg-[#00BF04] text-white px-6 py-4 rounded-lg w-full h-full">Buy Now</button>
       </div>
     </div>
     <div class="flex justify-between px-4 pt-4">
-      <div class="flex justify-between px-4 w-1/2 bg-slate-100 py-2 px-4 rounded-lg m-1">
+      <div class="flex justify-between px-4 w-1/2 bg-[#F7F8FC] py-2 px-4 rounded-lg m-1">
         <img src="images/amazon-icon.png" class="h-5" />
         <span class="float-right text-indigo-500 font-bold">$1100</span>
       </div>
-      <div class="flex justify-between px-4 w-1/2 bg-slate-100 py-2 px-4 rounded-lg m-1">
+      <div class="flex justify-between px-4 w-1/2 bg-[#F7F8FC] py-2 px-4 rounded-lg m-1">
         <img src="images/ebay-icon.png" class="h-5" />
         <span class="float-right text-slate-500 font-bold">$1120</span>
       </div>
@@ -125,7 +125,7 @@
 
     <div class="flex justify-between pt-4">
       <div class="text-left">
-        <p class="text-[#866FAC] font-bold text-lg">Reviews</p>
+        <p class="text-[#866FAC] font-bold text-xl">Reviews</p>
       </div>
       <div class="text-right">
         <p class="text-[#866FAC] cursor-pointer">View All</p>
@@ -163,7 +163,7 @@
     </div>
     <div class="flex justify-between pt-4">
       <div class="text-left">
-        <p class="text-[#866FAC] font-bold text-lg">Similar Products</p>
+        <p class="text-[#866FAC] font-bold text-xl">Similar Products</p>
       </div>
       <div class="text-right">
         <p class="text-[#866FAC] cursor-pointer">View All</p>
@@ -198,7 +198,7 @@ export default {
   methods: {
     toggleAccordion() {
       this.isOpen = !this.isOpen;
-    },
+    }
   },
   components: { CircleProgress }
 };

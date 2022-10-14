@@ -12,17 +12,21 @@
     </div>
     <button class="p-4 text-white text-lg bg-sky-600 rounded w-full mt-32">Proceed</button>
   </div>
-  <div v-else class="p-4 sm:px-24">
-    <div class="absolute w-full sm:w-1/2 sm:right-0 sm:mt-8 mr-4">
-      <img src="images/percent.png" class="inline-block float-left" />
-      <img src="images/about-img-2.png" class="inline-block float-right" />
+  <div v-else class="p-4 sm:px-8">
+    <div class="flex justify-between">
+      <div>
+        <img src="images/percent.png" class="" />
+      </div>
+      <div>
+        <img src="images/about-img-2.png"/>
+      </div>
     </div>
-    <div class="grid sm:grid-cols-2 mt-24">
+    <div class="grid sm:grid-cols-2">
       <div class="slider">
         <img src="images/product-pc-icon.png" />
       </div>
-      <div class="grid grid-rows-2xl sm:mt-36 mt-2">
-        <p class="sm:p-24 p-2 text-sm">
+      <div class="grid grid-rows-2xl mt-2">
+        <p class="sm:p-16 p-2 text-sm">
           Screen 15.6" IPS (1920x1080) Full HD, matte / AMD Ryzen 5 5500U (2.1 — 4.0 GHz) / RAM 8 GB / SSD 512 GB /
           nVidia
           GeForce GTX 1650, 4 GB / without OD / LAN / Wi-Fi / Bluetooth / webcam / without OS / 2.15 kg / black
