@@ -28,11 +28,11 @@
       <div class="pt-10 pl-4 text-xl text-violet-800 font-bold text-left mb-2 w-3/5">
         Ask Anything
       </div>
-      <div class="mb-6 md:w-full pt-9">
+      <div class="mb-6 md:w-full pt-9 mr-2">
         <input
-          class="w-full h-10 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 border text-lg px-2 pr-6"
+          class="w-full h-10 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 border text-lg px-2 pr-10"
           type="search" name="search" id="search" placeholder="anyword of interest?">
-        <div class="left-0 inset-y-0 pl-3 -mt-8 ml-44 flex my-2.5 relative">
+        <div class="left-0 inset-y-0 pl-3 -mt-8 ml-44 flex my-2.5 relative float-right mr-3">
           <svg class="fill-current h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path
               d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" />

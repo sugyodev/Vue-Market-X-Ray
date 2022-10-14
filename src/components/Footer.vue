@@ -52,7 +52,7 @@
               </div>
             </div>
             <button
-              class="mb-4 md:mb-4 sm:w-1/2 bg-blue-500 border w-full px-5 py-3 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600">
+              class="mb-4 md:mb-4 sm:w-1/2 bg-blue-500 border w-full px-5 py-3 text-sm shadow-sm font-medium tracking-wider text-white rounded-md hover:shadow-lg hover:bg-purple-600" @click="onToggle">
               Show Results
             </button>
           </div>

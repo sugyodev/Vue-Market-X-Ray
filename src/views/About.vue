@@ -1,5 +1,5 @@
 <template>
-  <div class="jastify-center w-full sm:w-2/4 inline-block p-8 text-left pt-16 border-0">
+  <div class="jastify-center w-full inline-block p-8 text-left pt-16 border-0">
     <button class="text-indigo-800 text-5xl font-bold w-full"><span class="float-left">Who we are?</span><img
         src="images/about-img-2.png" class="float-right"></button>
     <h1 class="pt-12 text-2xl text-indigo-800 font-semibold">Lorem IPsum</h1>

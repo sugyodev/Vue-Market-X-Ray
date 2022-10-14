@@ -1,32 +1,5 @@
 <template>
   <div class="max-w-2xl mx-auto bg-slate-100 p-4 px-8 grid-rows-2 rounded">
-    <!-- <div class="inline-grid grid-cols-2 gap-4 w-full">
-      <div>
-        
-      </div>
-      <div class="grid-rows-3">
-        <div class="inline-grid grid-cols-3 w-full">
-          <p>{{product.name}}</p>
-          <p>a</p>
-          <p>a</p>
-        </div>
-        <div class="inline-grid grid-cols-2 w-full">
-          <p>a</p>
-          <p>a</p>
-        </div>
-        <div class="inline-grid grid-cols-2 w-full">
-          <p>a</p>
-          <p>a</p>
-        </div>
-      </div>
-    </div>
-    <div class="inline-grid grid-cols-2 gap-4 w-full">
-      <div>97%</div>
-      <div>
-        <div>a</div>
-        <div>b</div>
-      </div>
-    </div> -->
     <div class="grid grid-rows-3 grid-flow-col gap-2">
       <div class="row-span-3"><img src="images/favorite-device-icon.png" /></div>
       <div class="col-span-5"><span class="text-sm">{{product.name}}</span> <span class="float-right">1</span><span

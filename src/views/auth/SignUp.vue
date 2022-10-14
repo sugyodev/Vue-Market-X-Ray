@@ -22,7 +22,7 @@
           </div>
           <div class="mb-6 md:w-full">
             <label for="phone" class="block text-md text-left mb-1">Phone number</label>
-            <select class="w-1/4 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 py-2.5 border-r-0 text-lg">
+            <select class="w-1/4 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 py-2.5 border-r-0 text-sm">
               <!--Supplement an id here instead of using 'name'-->
               <option value="value1">+1</option>
               <option value="value1">+91</option>

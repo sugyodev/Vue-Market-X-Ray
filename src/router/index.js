@@ -13,38 +13,48 @@ const routes = [
   {
     path: "/",
     component: SignIn,
+    meta: { layout: 'auth' }
   },
   {
     path: "/signup",
     component: SignUp,
+    meta: { layout: 'auth' }
   },
   {
     path: "/home",
     component: Home,
+    layout: 'welcome'
   },
   {
     path: "/category",
     component: Category,
+    layout: 'welcome'
   },
   {
     path: "/product",
     component: Product,
+    layout: 'welcome'
   },
   {
     path: "/wizard",
-    component: Wizard
+    component: Wizard,
+    layout: 'welcome'
   },
   {
     path: "/favorite",
-    component: Favorite
+    component: Favorite,
+    layout: 'welcome'
   },
   {
     path: "/about",
-    component: About
+    component: About,
+    layout: 'welcome'
+
   },
   {
     path: '/:pathMatch(.*)*',
-    component: PageNotFound
+    component: PageNotFound,
+    layout: 'welcome'
   }
 ];
 

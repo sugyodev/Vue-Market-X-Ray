@@ -3,11 +3,11 @@
     <transition name="fade">
       <div v-if="isModalVisible">
         <div @click="onToggle" class="absolute bg-black opacity-70 inset-0 z-20"></div>
-        <div class="w-full px-8 fixed bottom-48 mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
+        <div class="w-full sm:w-1/2 px-8 fixed bottom-48 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
           <div class="p-4 px-8 bg-white rounded w-2/3 rounded-lg mb-4 msg-box">
             I think  these are the best for you
           </div>
-          <img src="images/product-logo-icon.png" class="float-right h-48"/>
+          <img src="images/product-logo-icon.png" class="float-right h-48 cursor-pointer"/>
         </div>
       </div>
     </transition>
@@ -15,7 +15,7 @@
   <div class="jastify-center w-full pl-3 p-8 text-left pt-12 border-0 sm:p-16">
     <div class="flex justify-between">
       <button class=" text-violet-400 text-3xl sm:text-5xl font-bold">Smart Phones</button>
-      <img src="images/about-img-2.png" class="float-right sm:mr-12">
+      <img src="images/about-img-2.png" class="float-right sm:mr-12 cursor-pointer" @click="gowizard">
     </div>
     <div class="w-full sm:grid sm:grid-cols-2 ">
       <div class="sort"></div>
@@ -62,8 +62,8 @@
       </div>
     </div>
     <div class="sm:ml-8">
-      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-1/5 m-2 inline-block">
-        <Card :product="p" />
+      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-1/5 m-2 inline-block cursor-pointer" @click="goproduct">
+        <Card :product="p"/>
       </div>
     </div>
   </div>
@@ -101,14 +101,20 @@ export default {
   components: {
     Card
   },
-  methods: {
-    onToggle() {
-      this.isOpen = !this.isOpen;
-    }
-  },
   computed: {
     isModalVisible() {
       return this.isOpen;
+    }
+  },
+  methods:{
+    onToggle() {
+      this.isOpen = !this.isOpen;
+    },
+    gowizard: function(){
+      this.$router.push('/wizard');
+    },
+    goproduct: function(){
+      this.$router.push('/product');
     }
   },
   data() {
