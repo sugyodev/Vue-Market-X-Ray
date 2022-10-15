@@ -46,12 +46,14 @@
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
                     <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2">View All</div>
                   </div>
-                  <img src="images/info.png" />
+                  <!-- <img src="images/info.png" /> -->
+                  <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
                     <div class="w-1/2 inline-block text-right text-[#866FAC] p-2">View All</div>
                   </div>
-                  <img src="images/info.png" />
+                  <!-- <img src="images/info.png" /> -->
+                  <ScatterChart />
                 </div>
               </div>
               <div v-bind:class="{'hidden': openTab !== 2, 'block': openTab === 2}">
@@ -60,12 +62,14 @@
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
                     <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2">View All</div>
                   </div>
-                  <img src="images/info.png" />
+                  <!-- <img src="images/info.png" /> -->
+                  <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
                     <div class="w-1/2 inline-block text-right text-[#866FAC] p-2">View All</div>
                   </div>
-                  <img src="images/info.png" />
+                  <!-- <img src="images/info.png" /> -->
+                  <ScatterChart />
                 </div>
               </div>
               <div v-bind:class="{'hidden': openTab !== 3, 'block': openTab === 3}">
@@ -74,12 +78,14 @@
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
                     <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2">View All</div>
                   </div>
-                  <img src="images/info.png" />
+                  <!-- <img src="images/info.png" /> -->
+                  <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
                     <div class="w-1/2 inline-block text-right text-[#866FAC] p-2">View All</div>
                   </div>
-                  <img src="images/info.png" />
+                  <!-- <img src="images/info.png" /> -->
+                  <ScatterChart />
                 </div>
               </div>
             </div>
@@ -91,24 +97,26 @@
 </template>
   
 <script>
+import ScatterChart from '@/components/ScatterChart.vue';
 export default {
-  name: 'home-page',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      openTab: 1,
-    }
-  },
-  methods: {
-    toggleTabs: function (tabNumber) {
-      this.openTab = tabNumber
+    name: "home-page",
+    props: {
+        msg: String
     },
-    gowizard: function(){
-      this.$router.push('/wizard');
-    }
-  }
+    data() {
+        return {
+            openTab: 1,
+        };
+    },
+    methods: {
+        toggleTabs: function (tabNumber) {
+            this.openTab = tabNumber;
+        },
+        gowizard: function () {
+            this.$router.push("/wizard");
+        }
+    },
+    components: { ScatterChart }
 }
 </script>
   

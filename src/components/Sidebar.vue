@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade">
       <div v-if="openSidebar">
-        <div @click="$emit('disableSidebar')" class="absolute bg-black opacity-70 inset-0 z-20 sm:hidden"></div>
+        <div @click="disableSidebar" class="absolute bg-black opacity-70 inset-0 z-20 sm:hidden"></div>
         <div
           class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:relative sm:mt-4 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen bg-side transition-all duration-300"
           :class="openSidebar === true ? 'sm:w-64 w-full' : 'hidden'">
@@ -13,22 +13,21 @@
                 <p class="text-[#282828] my-1">Paulo Lingard</p>
                 <p class="text-[#282828] my-1">email@gmail.com</p>
               </div>
-              <span class="pt-4 cursor-pointer h-8" @click="$emit('disableSidebar')"><img
-                  src="images/close-fill.png" /></span>
+              <span class="pt-4 cursor-pointer h-8" @click="toggleSidebar"><img src="images/close-fill.png" /></span>
             </div>
             <hr />
           </div>
           <div class="py-2">
             <div class="my-6 flex justify-between cursor-pointer"
               @click="()=>{openFavorite=false;openCategory=!openCategory;chooseLanguage=false}">
-              <div class="text-black text-left pl-8 pr-8 ">
+              <div class="text-[#282828] text-left pl-8 pr-8 ">
                 Categories
               </div>
               <img src="images/expand_right.png" class="mr-4">
             </div>
             <div class="my-6 flex justify-between cursor-pointer"
-              @click="()=>{openFavorite=!openFavorite;openCategory=false;chooseLanguage=false}">
-              <div class="text-black text-left pl-8 pr-8 ">
+              @click="goFavorite">
+              <div class="text-[#282828] text-left pl-8 pr-8">
                 Favorites
               </div>
               <img src="images/expand_right.png" class="mr-4">
@@ -36,30 +35,30 @@
             <hr />
           </div>
           <div class="grid grid-rows py-4">
-            <div class="text-black text-left pl-8 pr-8 cursor-pointer my-3">
+            <div class="text-[#282828] text-left pl-8 pr-8 cursor-pointer my-3" @click="goHome">
               Home
             </div>
-            <div class="text-black text-left pl-8 pr-8 cursor-pointer my-3">
+            <div class="text-[#282828] text-left pl-8 pr-8 cursor-pointer my-3">
               Trending Searches
             </div>
-            <div class="text-black text-left pl-8 pr-8 cursor-pointer my-3">
+            <div class="text-[#282828] text-left pl-8 pr-8 cursor-pointer my-3" @click="goProduct">
               Product Ranks
             </div>
-            <div class="text-black text-left pl-8 pr-8 cursor-pointer my-3" @click="goAboutus">
-              About us
+            <div class="text-[#282828] text-left pl-8 pr-8 cursor-pointer my-3" @click="goAboutUs">
+              About Us
             </div>
-            <div class="text-black text-left pl-8 pr-8 cursor-pointer my-3"
+            <div class="text-[#282828] text-left pl-8 pr-8 cursor-pointer my-3"
               @click="()=>{openFavorite=false;openCategory=false;chooseLanguage=!chooseLanguage}">
               Choose language
             </div>
           </div>
-          <div class="text-left pt-48 sm:pt-10">
-            <button class="text-slate-400 pl-8 pr-8 w-1/5">LogOut</button>
+          <div class="text-left pt-56 sm:pt-24">
+            <button class="text-slate-400 pl-8 pr-8 w-1/5" @click="logout">LogOut</button>
           </div>
         </div>
 
         <div
-          class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-80 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen sm:h-[900px] bg-side transition-all duration-300"
+          class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen sm:h-[880px] bg-side transition-all duration-300"
           :class="openCategory === true ? 'sm:w-64 w-full' : 'hidden'">
           <div class="text-left px-2 cursor-pointer w-1/2 py-4" @click="openCategory=!openCategory">
             <img src="images/arrow.png" class="inline-block w-auto mb-1" />
@@ -76,91 +75,91 @@
             </div>
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
-              Categories
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
+              All Categories
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Laptops, tablets and
               computer equipment
             </div>
-            <img src="images/expand_right.png" class="mr-4 h-6 mt-2">
+            <img src="images/expand_right.png" class="mr-4 h-5 mt-2">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Appliances for the kitchen
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 h-5 mt-2">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Appliances for the home
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Smart watches and gadgets
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Televisions and multimedia
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Game consoles and gaming
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Photo and video
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Beauty and health
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Dishes
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Household chemicals
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Tools and auto goods
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="my-2 flex justify-between cursor-pointer">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Services, subscriptions and software product search
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-6">
+            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
-          <div class="text-left sm:pt-10">
-            <button class="text-slate-400 pl-8 pr-8 w-1/5">LogOut</button>
+          <div class="text-left sm:pt-10 pt-16">
+            <button class="text-slate-400 pl-8 pr-8 w-1/5" @click="logout">LogOut</button>
           </div>
         </div>
 
         <div
-          class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-80 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen bg-side transition-all duration-300"
+          class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen bg-side transition-all duration-300"
           :class="chooseLanguage === true ? 'sm:w-64 w-full' : 'hidden'">
           <div class="text-left px-2 cursor-pointer w-1/2 py-4" @click="chooseLanguage=!chooseLanguage">
             <img src="images/arrow.png" class="inline-block w-auto mb-1" />
@@ -177,31 +176,31 @@
             </div>
           </div>
           <div class="my-5 flex justify-between cursor-pointer pr-12">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-left pl-8 pr-8 ">
               English
             </div>
             <input type="radio" :checked="activelanguage==0" @change="radioChange" value="0" />
           </div>
           <div class="my-5 flex justify-between cursor-pointer pr-12">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-left pl-8 pr-8 ">
               French
             </div>
             <input type="radio" :checked="activelanguage==1" @change="radioChange" value="1" />
           </div>
           <div class="my-5 flex justify-between cursor-pointer pr-12">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-left pl-8 pr-8 ">
               Portuguese
             </div>
             <input type="radio" :checked="activelanguage==2" @change="radioChange" value="2" />
           </div>
           <div class="my-5 flex justify-between cursor-pointer pr-12">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-left pl-8 pr-8 ">
               Polish
             </div>
             <input type="radio" :checked="activelanguage==3" @change="radioChange" value="3" />
           </div>
           <div class="my-5 flex justify-between cursor-pointer pr-12">
-            <div class="text-black text-left pl-8 pr-8 ">
+            <div class="text-[#282828] text-left pl-8 pr-8 ">
               German
             </div>
             <input type="radio" :checked="activelanguage==4" @change="radioChange" value="4" />
@@ -221,6 +220,8 @@ export default {
   name: "sidebar-component",
   props: {
     openSidebar: Boolean,
+    disableSidebar: function () { },
+    toggleSidebar: function () { }
   },
   data: function () {
     return {
@@ -235,8 +236,24 @@ export default {
     radioChange: function (e) {
       this.activelanguage = e.target.value;
     },
-    goAboutus: function () {
+    goHome: function () {
+      this.$router.push('/home');
+      this.disableSidebar()
+    },
+    goAboutUs: function () {
       this.$router.push('/about');
+      this.disableSidebar()
+    },
+    goProduct: function () {
+      this.$router.push('/product');
+      this.disableSidebar()
+    },
+    goFavorite: function () {
+      this.$router.push('/favorite');
+      this.disableSidebar()
+    },
+    logout: function () {
+      this.$router.push('/');
     }
   },
   mounted: function () {

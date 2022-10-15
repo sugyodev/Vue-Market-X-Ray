@@ -1,12 +1,13 @@
 <template>
-  <div v-if="openAddreview" class="add-review absolute sm:p-20 p-2 sm:w-full">
+  <div v-if="openAddreview" class="add-review sm:p-20 p-2 w-full">
     <div class="grid grid-cols-2">
       <button class="text-2xl font-bold" @click="openAddreview=!openAddreview">Reviews</button>
       <div class="text-right"><img src="images/about-img-2.png" class="float-right" /></div>
     </div>
     <div>
       <h1 class="w-full text-3xl">Write Review</h1>
-      <img src="images/rate.png" class="w-auto m-4" />
+      <!-- <img src="images/rate.png" class="w-auto m-4" /> -->
+        <Rate v-model="rating" :value="rating" :addRate="addRate"/>
       <input class="p-2 bg-slate-100 rounded w-full my-3" placeholder="Smith" />
       <textarea placeholder="Add a component" class="p-4 bg-slate-100 rounded w-full my-2 h-48"></textarea>
     </div>
@@ -18,7 +19,7 @@
         <img src="images/percent.png" class="" />
       </div>
       <div>
-        <img src="images/about-img-2.png"/>
+        <img src="images/about-img-2.png" />
       </div>
     </div>
     <div class="grid sm:grid-cols-2">
@@ -36,8 +37,8 @@
             <p class="text-xs">Lowest Price</p>
             <strong class="font-bold text-2xl">$1130</strong>
           </div>
-          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/amazon-icon.png"
-              class="inline-block mr-2"><span class="text-[#3F37C9]">$1140</span></div>
+          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/amazon-icon.png" class="inline-block mr-2"><span
+              class="text-[#3F37C9]">$1140</span></div>
           <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/ebay-icon.png"
               class="inline-block mr-2"><span>$1130</span></div>
         </div>
@@ -45,7 +46,8 @@
     </div>
 
     <div class="text-left m-3">
-      <input type="checkbox" class="left-0 mr-2 h-4 w-4" /><span class="text-sm">Notify me on price drop of this product</span>
+      <input type="checkbox" class="left-0 mr-2 h-4 w-4" /><span class="text-sm">Notify me on price drop of this
+        product</span>
     </div>
     <div class="tab flex flex-wrap mt-2">
       <div class="w-full">
@@ -99,19 +101,22 @@
 <script>
 import Review from '../../components/Review.vue'
 import Spec from '../../components/Spec.vue'
+import Rate from '../../components/Rate.vue'
 import Detail from '../../components/Detail.vue'
 export default {
   name: 'product-page',
   components: {
     Review,
     Spec,
-    Detail
+    Detail,
+    Rate
   },
   props: {
     msg: String
   },
   data() {
     return {
+      rating: 3,
       openTab: 1,
       openAddreview: false,
       reviews: [
@@ -141,6 +146,9 @@ export default {
   methods: {
     toggleTabs: function (tabNumber) {
       this.openTab = tabNumber
+    },
+    addRate: function(no){
+      this.rating = no;
     }
   }
 }

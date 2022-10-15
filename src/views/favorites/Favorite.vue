@@ -2,7 +2,7 @@
   <div class="jastify-center w-full pl-3 p-8 text-left pt-12 border-0">
     <div class="w-full m-1 sm:mx-8">
       <button class=" text-violet-400 text-3xl sm:text-5xl font-bold">Your Favorites</button>
-      <img src="images/about-img-2.png" class="float-right sm:mr-12">
+      <img src="images/about-img-2.png" class="float-right sm:mr-12 cursor-pointer" @click="gowizard">
     </div>
     <div class="sm:ml-8">
       <div v-for="p in products" v-bind:key="p.no" class="w-full inline-block">
@@ -18,6 +18,11 @@ export default {
   name: 'favorite-page',
   components: {
     Card
+  },
+  methods: {
+    gowizard: function () {
+      this.$router.push('/wizard');
+    }
   },
   data() {
     return {

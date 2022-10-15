@@ -15,20 +15,21 @@
           :border-bg-width="0" :show-percent="true" />
       </div>
     </div>
-    <div class="flex justify-between mt-4">
-      <div class="pt-10 pl-4 text-xl text-[#866FAC] font-bold text-left mb-2">
+    <div class="flex justify-between">
+      <div class="pt-20 text-xl text-[#866FAC] font-bold text-left mb-2">
         Category Comparison
       </div>
-      <div>
-        <img src="images/radar.png">
+      <div class="-mt-12">
+        <!-- <img src="images/radar.png"> -->
+        <RadarChart class="mr-2" />
       </div>
     </div>
 
-    <div class="flex justify-between">
-      <div class="pt-10 text-xl text-[#866FAC] font-bold text-left mb-2 w-1/2">
+    <div class="flex justify-between -mt-16">
+      <div class=" text-xl text-[#866FAC] font-bold text-left mb-2 w-1/2">
         Ask Anything
       </div>
-      <div class="mb-6 md:w-full pt-9 mr-2 w-52">
+      <div class="mb-6 md:w-full mr-2 w-52">
         <input
           class="w-full h-10 border rounded-lg p-4 outline-none focus:shadow-outline bg-[#F7F8FC] border text-base pr-8"
           type="search" name="search" id="search" placeholder="Any word of interest?">
@@ -100,6 +101,10 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div>
+      <LineChart />
     </div>
 
     <div class="flex justify-between px-4 pt-4">
@@ -187,6 +192,8 @@
 <script>
 import "vue3-circle-progress/dist/circle-progress.css";
 import CircleProgress from "vue3-circle-progress";
+import RadarChart from "../components/RadarChart.vue";
+import LineChart from "../components/LineChart.vue";
 export default {
   data() {
     return {
@@ -200,7 +207,7 @@ export default {
       this.isOpen = !this.isOpen;
     }
   },
-  components: { CircleProgress }
+  components: { CircleProgress, RadarChart, LineChart }
 };
 </script>
 <style>

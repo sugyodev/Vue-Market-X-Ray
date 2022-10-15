@@ -5,7 +5,8 @@
   </div> -->
   <Header v-if="layout!=='auth'" :openSidebar="openSidebar" @toggleSidebar="toggleSidebar" />
   <div class="flex">
-    <Sidebar v-if="layout!=='auth'" :openSidebar="openSidebar" @disableSidebar="disableSidebar"/>
+    <Sidebar v-if="layout!=='auth'" :openSidebar="openSidebar" :disableSidebar="disableSidebar"
+      :toggleSidebar="toggleSidebar" />
     <router-view />
   </div>
   <Footer v-if="layout!=='auth'" />
@@ -36,7 +37,7 @@ export default {
       this.openSidebar = !this.openSidebar;
     },
     disableSidebar: function () {
-      this.openSidebar = false;
+      if (window.innerWidth <= 1000) this.openSidebar = false;
     },
     handleResize: function () {
       window.innerWidth <= 1000 && (this.openSidebar = false);

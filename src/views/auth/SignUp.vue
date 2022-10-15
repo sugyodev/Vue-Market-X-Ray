@@ -51,7 +51,7 @@ export default {
   methods: {
     signin: function () {
       this.$router.push('/');
-    }
+    },
   },
   props: {
     msg: String
