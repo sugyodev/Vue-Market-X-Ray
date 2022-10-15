@@ -10,7 +10,11 @@
         <p class="text-sm">#3 in <span class="text-[#449dd1]">Computers</span></p>
         <p class="text-sm">#1 in <span class="text-[#449dd1]">Laptops</span></p>
       </div>
-      <div>
+      <div ref="circlebtnRef" v-on:mouseenter="toggleTooltip()" v-on:mouseleave="toggleTooltip()">
+        <div ref="circletooltipRef" v-bind:class="{'hidden': !tooltipShow, 'block': tooltipShow}"
+          class="bg-[#449DD1] circle-tooltip border-0 mr-8 block z-50 font-normal leading-normal text-white text-sm text py-3 px-6 rounded">
+          An amazing X Rank <br /> Score!!<br />Other users <br /> loved this one
+        </div>
         <circle-progress :percent="90" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
           :border-bg-width="0" :show-percent="true" />
       </div>
@@ -194,10 +198,13 @@ import "vue3-circle-progress/dist/circle-progress.css";
 import CircleProgress from "vue3-circle-progress";
 import RadarChart from "../components/RadarChart.vue";
 import LineChart from "../components/LineChart.vue";
+import { createPopper } from "@popperjs/core";
+
 export default {
   data() {
     return {
-      color: "#00BF04"
+      color: "#00BF04",
+      tooltipShow: false,
     }
   },
   name: "detail-com",
@@ -205,6 +212,16 @@ export default {
   methods: {
     toggleAccordion() {
       this.isOpen = !this.isOpen;
+    },
+    toggleTooltip: function () {
+      if (this.tooltipShow) {
+        this.tooltipShow = false;
+      } else {
+        this.tooltipShow = true;
+        createPopper(this.$refs.circlebtnRef, this.$refs.circletooltipRef, {
+          placement: "left"
+        });
+      }
     }
   },
   components: { CircleProgress, RadarChart, LineChart }
@@ -214,5 +231,18 @@ export default {
 .current-counter {
   font-size: 30px;
   font-weight: 600;
+}
+.circle-tooltip{
+  margin-right: 20px !important;
+}
+.circle-tooltip::before{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top:50px;
+  left: 165px;
+  background-color:#449DD1;
+  transform: rotate(45deg);
 }
 </style>

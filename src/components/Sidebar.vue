@@ -238,19 +238,25 @@ export default {
     },
     goHome: function () {
       this.$router.push('/home');
-      this.disableSidebar()
+      this.disableSidebar();
+      this.openCategory=false;
+      this.chooseLanguage=false;
     },
     goAboutUs: function () {
       this.$router.push('/about');
-      this.disableSidebar()
+      this.disableSidebar();
+      this.openCategory=false;
+      this.chooseLanguage=false;
     },
     goProduct: function () {
       this.$router.push('/product');
       this.disableSidebar()
+      this.openCategory=false;
+      this.chooseLanguage=false;
     },
     goFavorite: function () {
       this.$router.push('/favorite');
-      this.disableSidebar()
+      this.disableSidebar();
     },
     logout: function () {
       this.$router.push('/');

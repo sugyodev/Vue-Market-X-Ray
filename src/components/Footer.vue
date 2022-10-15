@@ -5,8 +5,8 @@
   <div id="app">
     <transition name="fade">
       <div v-if="isModalVisible">
-        <div @click="onToggle" class="absolute bg-black opacity-70 inset-0 z-0"></div>
-        <div class="w-full px-8 fixed bottom-0 mx-auto my-auto rounded-xl shadow-lg bg-white">
+        <div @click="onToggle" class="absolute bg-black opacity-70 inset-0 z-20"></div>
+        <div class="w-full px-8 fixed bottom-0 mx-auto my-auto rounded-t-xl overflow-x-auto sm:max-h-[600px] max-h-[800px] shadow-lg bg-white z-20">
           <div class="justify-center w-full">
             <div v-for="c of items" :key="c.title">
               <div class="title bg-slate-50 mt-3 p-3 text-black text-left" @click="c.active = !c.active">
