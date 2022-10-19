@@ -3,8 +3,8 @@
     <div class="grid grid-rows-3 grid-flow-col">
       <div class="row-span-4"><img src="images/favorite-device-icon.png" /></div>
       <div class="col-span-5"><span class="text-sm">{{product.name}}</span>
-        <span class="float-right m-1"><img src="images/heart-icon.png" /></span>
-        <span class="float-right m-1"><img src="images/recommend-icon.png" /></span>
+        <span class="float-right m-1 cursor-pointer hover:opacity-40"><img src="images/heart-icon.png" /></span>
+        <span class="float-right m-1 cursor-pointer hover:opacity-40"><img src="images/recommend-icon.png" /></span>
       </div>
       <div class="col-span-5">
         <span class="text-sm text-[#7E7E7E] h-4">Minimal price</span>
@@ -13,12 +13,21 @@
       <div class="col-span-5 flex justify-between text-base"><span>{{product.price}}</span><span>Apple</span></div>
     </div>
     <div class="grid grid-rows-2 grid-flow-col gap-2">
-      <circle-progress :percent="90" class="row-span-2 mt-3" :size="50" :border-width="5" :fill-color="product.color"
-        :border-bg-width="0" :show-percent="true" />
-      <div class="col-span-5 py-1 bg-white text-center"><img src="images/amazon-icon.png" class="max-w-xl inline-block">
-      </div>
-      <div class="col-span-5 py-1 bg-white text-center"><img src="images/ebay-icon.png" class="max-w-xl inline-block">
-      </div>
+      <circle-progress :percent="product.percent" class="row-span-2 mt-3" :size="50" :border-width="5" :fill-color="(function(){
+      if(product.percent>60){
+        return color1;
+      } 
+      else if(product.percent>30){
+        return color2;
+      }
+      else{
+        return color3;
+      }
+      }())" :border-bg-width="0" :show-percent="true" />
+      <a class="col-span-5 py-1 bg-white text-center cursor-pointer" href="https://www.amazon.com"><img src="images/amazon-icon.png" class="max-w-xl inline-block">
+      </a>
+      <a class="col-span-5 py-1 bg-white text-center cursor-pointer" href="https://www.ebay.com"><img src="images/ebay-icon.png" class="max-w-xl inline-block">
+      </a>
     </div>
   </div>
   <div>
@@ -30,7 +39,9 @@ import CircleProgress from "vue3-circle-progress";
 export default {
   data() {
     return {
-      color: 'red'
+      color1: 'green',
+      color2: 'yellow',
+      color3: 'red',
     }
   },
   name: 'card-com',

@@ -44,13 +44,13 @@
                 <div>
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
-                    <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2">View All</div>
+                    <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
                   <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
-                    <div class="w-1/2 inline-block text-right text-[#866FAC] p-2">View All</div>
+                    <div class="w-1/2 inline-block text-right text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
                   <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
@@ -60,13 +60,13 @@
                 <div>
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
-                    <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2">View All</div>
+                    <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
                   <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
-                    <div class="w-1/2 inline-block text-right text-[#866FAC] p-2">View All</div>
+                    <div class="w-1/2 inline-block text-right text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
                   <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
@@ -76,13 +76,13 @@
                 <div>
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
-                    <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2">View All</div>
+                    <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
                   <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
-                    <div class="w-1/2 inline-block text-right text-[#866FAC] p-2">View All</div>
+                    <div class="w-1/2 inline-block text-right text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
                   <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
@@ -114,6 +114,9 @@ export default {
         },
         gowizard: function () {
             this.$router.push("/wizard");
+        },
+        goCategory: function () {
+            this.$router.push("/category");
         }
     },
     components: { ScatterChart }

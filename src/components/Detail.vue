@@ -15,7 +15,7 @@
           class="bg-[#449DD1] circle-tooltip border-0 mr-8 block z-50 font-normal leading-normal text-white text-sm text py-3 px-6 rounded">
           An amazing X Rank <br /> Score!!<br />Other users <br /> loved this one
         </div>
-        <circle-progress :percent="90" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
+        <circle-progress :percent="85" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
           :border-bg-width="0" :show-percent="true" />
       </div>
     </div>
@@ -180,14 +180,20 @@
     </div>
     <div class="mt-2 w-full grid sm:grid-cols-4 grid-cols-2">
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <img src="images/recommend-icon.png" class="m-1" />
+        <img src="images/recommend-icon.png" class="m-1 hover:opacity-40 cursor-pointer" />
         <img src="images/favorite-device-icon.png" class="m-1" />
-        <img src="images/heart-icon.png" class="m-1" />
+        <div>
+          <img src="images/heart-icon.png" class="m-1 hover:opacity-40 cursor-pointer float-right" />
+        </div>
       </div>
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <img src="images/recommend-icon.png" class="m-1" />
-        <img src="images/favorite-device-icon.png" class="m-1" />
-        <img src="images/heart-icon.png" class="m-1" />
+        <img src="images/recommend-icon.png" class="m-1 hover:opacity-40 cursor-pointer" />
+        <div class="text-center">
+          <img src="images/favorite-device-icon.png" class="m-1" />
+        </div>
+        <div>
+          <img src="images/heart-icon.png" class="m-1 hover:opacity-40 cursor-pointer float-right" />
+        </div>
       </div>
     </div>
   </div>
@@ -232,17 +238,19 @@ export default {
   font-size: 30px;
   font-weight: 600;
 }
-.circle-tooltip{
+
+.circle-tooltip {
   margin-right: 20px !important;
 }
-.circle-tooltip::before{
+
+.circle-tooltip::before {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
-  top:50px;
+  top: 50px;
   left: 165px;
-  background-color:#449DD1;
+  background-color: #449DD1;
   transform: rotate(45deg);
 }
 </style>

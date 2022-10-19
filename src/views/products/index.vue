@@ -16,7 +16,9 @@
   <div v-else class="p-4 sm:px-8">
     <div class="flex justify-between">
       <div>
-        <img src="images/percent.png" class="" />
+        <!-- <img src="images/percent.png" class="" /> -->
+        <circle-progress :percent="92" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
+          :border-bg-width="0" :show-percent="true" />
       </div>
       <div>
         <img src="images/about-img-2.png" />
@@ -103,19 +105,23 @@ import Review from '../../components/Review.vue'
 import Spec from '../../components/Spec.vue'
 import Rate from '../../components/Rate.vue'
 import Detail from '../../components/Detail.vue'
+import CircleProgress from "vue3-circle-progress";
+
 export default {
   name: 'product-page',
   components: {
     Review,
     Spec,
     Detail,
-    Rate
+    Rate,
+    CircleProgress
   },
   props: {
     msg: String
   },
   data() {
     return {
+      color: "#00BF04",
       rating: 3,
       openTab: 1,
       openAddreview: false,

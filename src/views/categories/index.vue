@@ -57,7 +57,7 @@
             </transition>
           </div>
         </Listbox>
-        <div class="sm:mr-24 md:mr-48">
+        <div class="sm:mr-24 md:mr-48 cursor-pointer">
           <img src="images/sort-icon.png"
             class="inline-block sm:h-[38px] p-2 h-[42px] w-[42px] sm:w-[38px] bg-slate-100 rounded border-solid border-2 border-slate-300 mt-1" />
         </div>
@@ -132,31 +132,31 @@ export default {
       isOpen: true,
       products: [
         {
-          no: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 97
+          no: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 77
         },
         {
-          no: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 97
+          no: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 87
         },
         {
-          no: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 97
+          no: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 32
         },
         {
-          no: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 97
+          no: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 57
         },
         {
-          no: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 97
+          no: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 91
         },
         {
-          no: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 97
+          no: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 34
         },
         {
-          no: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 97
+          no: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 12
         },
         {
-          no: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 97
+          no: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 96
         },
         {
-          no: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 97
+          no: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 88
         }
       ]
     }

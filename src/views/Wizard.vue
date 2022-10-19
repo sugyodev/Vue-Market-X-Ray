@@ -24,17 +24,17 @@
     <p class="text-[26px] my-12 text-[#866FAC] font-bold">Which type of user?</p>
     <Slider v-model="value1" class="px-4" @change="onchange1" />
     <div class="grid grid-cols-4 mt-5">
-      <span class="text-sm" :class="data1===1?'text-[#3F37C9]':'text-[#282828]'">Beginner</span>
-      <span class="text-sm" :class="data1===2?'text-[#3F37C9]':'text-[#282828]'">Amateur</span>
-      <span class="text-sm" :class="data1===3?'text-[#3F37C9]':'text-[#282828]'">Advanced</span>
-      <span class="text-sm" :class="data1===4?'text-[#3F37C9]':'text-[#282828]'">Professional</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value1=5" :class="data1===1?'text-[#3F37C9]':'text-[#282828]'">Beginner</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value1=25" :class="data1===2?'text-[#3F37C9]':'text-[#282828]'">Amateur</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value1=55" :class="data1===3?'text-[#3F37C9]':'text-[#282828]'">Advanced</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value1=75" :class="data1===4?'text-[#3F37C9]':'text-[#282828]'">Professional</span>
     </div>
-    <p class="text-2xl my-12 text-violet-400 font-bold">What is your budget?</p>
+    <p class="text-2xl my-12 text-[#866FAC] font-bold">What is your budget?</p>
     <Slider v-model="value2" tooltips="false" class="px-4" @change="onchange2"/>
     <div class="grid grid-cols-3 mt-5">
-      <span class="text-sm" :class="data2===1?'text-[#3F37C9]':'text-[#282828]'">As low as possible</span>
-      <span class="text-sm" :class="data2===2?'text-[#3F37C9]':'text-[#282828]'">Standard</span>
-      <span class="text-sm" :class="data2===3?'text-[#3F37C9]':'text-[#282828]'">Whatever it takes</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value2=10" :class="data2===1?'text-[#3F37C9]':'text-[#282828]'">As low as possible</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value2=40" :class="data2===2?'text-[#3F37C9]':'text-[#282828]'">Standard</span>
+      <span class="text-sm cursor-pointer hover:text-[#3F37c9]" @click="value2=70" :class="data2===3?'text-[#3F37C9]':'text-[#282828]'">Whatever it takes</span>
     </div>
     <div class="text-left my-6 mx-2">
       <input type="checkbox" class="w-4 h-4"/> <span class="text-sm ml-1">I'm flexible</span>

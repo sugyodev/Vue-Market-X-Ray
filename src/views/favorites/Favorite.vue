@@ -31,28 +31,28 @@ export default {
           no: 1, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
         },
         {
-          no: 2, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 2, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 20
         },
         {
-          no: 3, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 3, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 65
         },
         {
-          no: 4, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 4, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 25
         },
         {
-          no: 5, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 5, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 48
         },
         {
-          no: 6, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 6, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 79
         },
         {
-          no: 7, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 7, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 84
         },
         {
           no: 8, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
         },
         {
-          no: 9, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 97
+          no: 9, name: 'Iphone XS Max', recommend: false, filled: false, price: '$800', percent: 91
         }
       ]
     }
