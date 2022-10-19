@@ -180,19 +180,21 @@
     </div>
     <div class="mt-2 w-full grid sm:grid-cols-4 grid-cols-2">
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <img src="images/recommend-icon.png" class="m-1 hover:opacity-40 cursor-pointer" />
+        <div @click="recommend1=!recommend1">
+          <img :src="recommend1?recommend_image1:recommend_image2" class="m-1 hover:opacity-40 cursor-pointer" />
+        </div>
         <img src="images/favorite-device-icon.png" class="m-1" />
-        <div>
-          <img src="images/heart-icon.png" class="m-1 hover:opacity-40 cursor-pointer float-right" />
+        <div @click="heart1=!heart1"><img :src="heart1?heart_image1:heart_image2"
+            class="m-1 hover:opacity-40 cursor-pointer float-right" />
         </div>
       </div>
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <img src="images/recommend-icon.png" class="m-1 hover:opacity-40 cursor-pointer" />
-        <div class="text-center">
-          <img src="images/favorite-device-icon.png" class="m-1" />
+        <div @click="recommend2=!recommend2">
+          <img :src="recommend2?recommend_image1:recommend_image2" class="m-1 hover:opacity-40 cursor-pointer" />
         </div>
-        <div>
-          <img src="images/heart-icon.png" class="m-1 hover:opacity-40 cursor-pointer float-right" />
+        <img src="images/favorite-device-icon.png" class="m-1" />
+        <div @click="heart2=!heart2"><img :src="heart2?heart_image1:heart_image2"
+            class="m-1 hover:opacity-40 cursor-pointer float-right" />
         </div>
       </div>
     </div>
@@ -211,6 +213,14 @@ export default {
     return {
       color: "#00BF04",
       tooltipShow: false,
+      heart1: false,
+      recommend1: true,
+      heart2: false,
+      recommend2: true,
+      heart_image1: "images/heart-icon.png",
+      heart_image2: "images/heart-icon-1.png",
+      recommend_image1: "images/recommend-icon-1.png",
+      recommend_image2: "images/recommend-icon.png",
     }
   },
   name: "detail-com",

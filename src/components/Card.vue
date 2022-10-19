@@ -3,8 +3,8 @@
     <div class="grid grid-rows-3 grid-flow-col">
       <div class="row-span-4"><img src="images/favorite-device-icon.png" /></div>
       <div class="col-span-5"><span class="text-sm">{{product.name}}</span>
-        <span class="float-right m-1 cursor-pointer hover:opacity-40"><img src="images/heart-icon.png" /></span>
-        <span class="float-right m-1 cursor-pointer hover:opacity-40"><img src="images/recommend-icon.png" /></span>
+        <span class="float-right m-1 cursor-pointer hover:opacity-40" @click="heart=!heart"><img :src="heart?heart_image1:heart_image2" /></span>
+        <span class="float-right m-1 cursor-pointer hover:opacity-40" @click="recommend=!recommend"><img :src="recommend?recommend_image1:recommend_image2" /></span>
       </div>
       <div class="col-span-5">
         <span class="text-sm text-[#7E7E7E] h-4">Minimal price</span>
@@ -24,9 +24,11 @@
         return color3;
       }
       }())" :border-bg-width="0" :show-percent="true" />
-      <a class="col-span-5 py-1 bg-white text-center cursor-pointer" href="https://www.amazon.com"><img src="images/amazon-icon.png" class="max-w-xl inline-block">
+      <a class="col-span-5 py-1 bg-white text-center cursor-pointer" href="https://www.amazon.com"><img
+          src="images/amazon-icon.png" class="max-w-xl inline-block">
       </a>
-      <a class="col-span-5 py-1 bg-white text-center cursor-pointer" href="https://www.ebay.com"><img src="images/ebay-icon.png" class="max-w-xl inline-block">
+      <a class="col-span-5 py-1 bg-white text-center cursor-pointer" href="https://www.ebay.com"><img
+          src="images/ebay-icon.png" class="max-w-xl inline-block">
       </a>
     </div>
   </div>
@@ -42,11 +44,17 @@ export default {
       color1: 'green',
       color2: 'yellow',
       color3: 'red',
+      heart: this.product.heart,
+      recommend: this.product.recommend,
+      heart_image1:"images/heart-icon.png", 
+      heart_image2: "images/heart-icon-1.png",
+      recommend_image1: "images/recommend-icon-1.png",
+      recommend_image2 : "images/recommend-icon.png",
     }
   },
   name: 'card-com',
   props: { product: {} },
-  components: { CircleProgress }
+  components: { CircleProgress },
 }
 </script>
 <style>
