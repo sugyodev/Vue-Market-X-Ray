@@ -1,9 +1,9 @@
 <template>
-  <div class="home px-4 sm:px-16 w-full py-6">
+  <div class="home px-4 sm:px-16 w-full pt-6">
     <div class="w-full justify-between flex">
       <div class="w-11/12 mr-2">
         <img src="images/search-icon.png" class="sm:relative sm:left-0 sm:top-11 absolute left-4 top-16 inset-y-0 pl-4 flex my-2.5 pt-1"/>
-        <input class="w-full h-12 border rounded py-3.5 outline-none focus:shadow-outline bg-slate-50 text-base pl-12"
+        <input class="w-full h-12 rounded-lg py-3.5 outline-none focus:shadow-outline bg-slate-50 text-base pl-12"
           type="search" name="search" id="search" placeholder="Search">
       </div>
       <div class="sm:pt-8 text-left -mt-2">
@@ -11,7 +11,7 @@
       </div>
     </div>
     <p class="text-left text-sm mb-6">You can use an <a href="#" class="text-[#449dd1]">Amazon</a> or <a href="#" class="text-[#449dd1]">Ebay</a> link</p>
-    <img src="images/banner.png" class="w-full sm:m-2 w-auto" />
+    <img src="images/banner.png" class="w-full sm:m-2" />
     <div class="tab flex flex-wrap mt-2">
       <div class="w-full">
         <ul class="flex mb-0 list-none grid grid-cols-3 rounded">
@@ -37,7 +37,7 @@
             </a>
           </li>
         </ul>
-        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded">
           <div class="sm:px-4 py-5 flex-auto">
             <div class="tab-content tab-space">
               <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
@@ -46,45 +46,39 @@
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
                     <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
-                  <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
                     <div class="w-1/2 inline-block text-right text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
-                  <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                 </div>
               </div>
               <div v-bind:class="{'hidden': openTab !== 2, 'block': openTab === 2}">
                 <div>
                   <div class="w-full my-2 px-4">
-                    <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
+                    <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Category 1</div>
                     <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
-                  <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
                     <div class="w-1/2 inline-block text-right text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
-                  <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                 </div>
               </div>
               <div v-bind:class="{'hidden': openTab !== 3, 'block': openTab === 3}">
                 <div>
                   <div class="w-full my-2 px-4">
-                    <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Smart Phones</div>
+                    <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">Category 2</div>
                     <div class="w-1/2 inline-block text-right text-base text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
-                  <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                   <div class="w-full my-2 px-4">
                     <div class="inline-block w-1/2 font-bold text-xl text-[#866FAC] text-left">TVs</div>
                     <div class="w-1/2 inline-block text-right text-[#866FAC] p-2 cursor-pointer hover:text-[#A48eB6]" @click="goCategory">View All</div>
                   </div>
-                  <!-- <img src="images/info.png" /> -->
                   <ScatterChart />
                 </div>
               </div>
