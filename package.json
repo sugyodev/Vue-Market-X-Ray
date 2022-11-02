@@ -35,6 +35,7 @@
     "vue-tailwind-icons": "^0.1.2",
     "vue-trend-chart": "^0.17.0",
     "vue3-apexcharts": "^1.4.1",
+    "vue3-carousel": "^0.2.4",
     "vue3-circle-progress": "^1.0.7",
     "vuejs-overlay": "^0.0.28",
     "vueperslides": "^3.4.2"
