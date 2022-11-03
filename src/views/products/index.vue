@@ -15,18 +15,23 @@
   </div>
   <div v-else class="p-4 sm:px-8">
     <div class="flex justify-between">
+      <img src="../../../public/images/left-direct-icon.png" class="cursor-pointer w-2 h-4 mt-3 ml-3" @click="this.$router.go(-1)"/>
+      <button class=" text-[#866FAC] text-xl font-bold w-3/4 text-left ml-1">{{name}}</button>
+      <img src="../../../public/images/heart-icon.png" class="float-right w-10 cursor-pointer" @click="goHome">
+    </div>
+    <div class="flex justify-between">
       <div>
         <!-- <img src="images/percent.png" class="" /> -->
         <circle-progress :percent="92" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
           :border-bg-width="0" :show-percent="true" />
       </div>
       <div>
-        <img src="images/about-img-2.png" />
+        <img src="../../../public/images/about-img-2.png" />
       </div>
     </div>
     <div class="grid sm:grid-cols-2">
       <div class="slider">
-        <img src="images/product-pc-icon.png" />
+        <img src="../../../public/images/product-pc-icon.png" />
       </div>
       <div class="grid grid-rows-2xl mt-2">
         <p class="sm:p-16 p-2 text-sm">
@@ -39,9 +44,9 @@
             <p class="text-xs">Lowest Price</p>
             <strong class="font-bold text-2xl">$1130</strong>
           </div>
-          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/amazon-icon.png" class="inline-block mr-2"><span
+          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="../../../public/images/amazon-icon.png" class="inline-block mr-2"><span
               class="text-[#3F37C9]">$1140</span></div>
-          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="images/ebay-icon.png"
+          <div class="bg-[#F7F8FC] pt-3 mx-1 rounded"><img src="../../../public/images/ebay-icon.png"
               class="inline-block mr-2"><span>$1130</span></div>
         </div>
       </div>
@@ -121,6 +126,7 @@ export default {
   },
   data() {
     return {
+      name:this.$route.params.name,
       color: "#00BF04",
       rating: 3,
       openTab: 1,
@@ -156,6 +162,9 @@ export default {
     addRate: function(no){
       this.rating = no;
     }
+  },
+  mounted:function(){
+    console.log(this.$route.params.name);
   }
 }
 </script>

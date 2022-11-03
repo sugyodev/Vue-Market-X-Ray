@@ -15,9 +15,9 @@
   </div>
   <div class="jastify-center w-full px-3 text-left border-0 sm:p-8">
     <div class="flex justify-between">
-      <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-10 ml-1" />
+      <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-10 ml-1" @click="this.$router.go(-1)"/>
       <button class=" text-[#866FAC] text-xl sm:text-5xl font-bold w-3/4 text-left ml-8">Smart Phones</button>
-      <img src="images/logo-icon.png" class="float-right sm:mr-24 cursor-pointer" @click="gowizard">
+      <img src="images/logo-icon.png" class="float-right sm:mr-24 cursor-pointer" @click="goHome">
     </div>
     <div class="w-full sm:grid sm:grid-cols-2 ">
       <div class="sort"></div>
@@ -57,7 +57,7 @@
             </transition>
           </div>
         </Listbox>
-        <div class="sm:mr-24 md:mr-48 cursor-pointer">
+        <div class="sm:mr-24 md:mr-48 cursor-pointer" @click="toggleFooter">
           <img src="images/sort-icon.png"
             class="inline-block sm:h-[38px] p-2 h-[42px] w-[42px] sm:w-[38px] bg-slate-100 rounded border-solid border-2 border-slate-300 mt-1" />
         </div>
@@ -109,8 +109,13 @@ export default {
       this.isOpen = !this.isOpen;
       window.onscroll = function () { };
     },
-    gowizard: function () {
-      this.$router.push('/wizard');
+    goHome: function () {
+      this.$router.push('/home');
+    },
+    toggleFooter() {
+      this.$store.commit({
+        type: 'toggleFooter',
+      });
     },
     goproduct: function () {
       this.$router.push('/product');

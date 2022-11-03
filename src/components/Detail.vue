@@ -122,11 +122,11 @@
     </div>
     <div class="flex justify-between px-4 pt-4">
       <div class="flex justify-between px-4 w-1/2 bg-[#F7F8FC] py-2 px-4 rounded-lg m-1">
-        <img src="images/amazon-icon.png" class="h-5" />
+        <img src="../../public/images/amazon-icon.png" class="h-5" />
         <span class="float-right text-indigo-500 font-bold">$1100</span>
       </div>
       <div class="flex justify-between px-4 w-1/2 bg-[#F7F8FC] py-2 px-4 rounded-lg m-1">
-        <img src="images/ebay-icon.png" class="h-5" />
+        <img src="../../public/images/ebay-icon.png" class="h-5" />
         <span class="float-right text-slate-500 font-bold">$1120</span>
       </div>
       <div></div>
@@ -144,11 +144,11 @@
       <div class="grid grid-rows-2 m-1 bg-[#F7F8FC] rounded-lg p-4 px-1 gap-4">
         <div class="flex justify-between">
           <div class="w-1/3">
-            <img src="images/avatar-2.png">
+            <img src="../../public/images/avatar-2.png">
           </div>
           <div class="text-left w-2/3">
             <p>Smith Smith</p>
-            <img src="images/amazon-icon.png">
+            <img src="../../public/images/amazon-icon.png">
           </div>
         </div>
         <div class="text-sm text-left">
@@ -158,11 +158,11 @@
       <div class="grid grid-rows-2 m-1 bg-[#F7F8FC] rounded-lg p-4 px-1 gap-4">
         <div class="flex justify-between">
           <div class="w-1/3">
-            <img src="images/avatar-2.png">
+            <img src="../../public/images/avatar-2.png">
           </div>
           <div class="text-left w-2/3">
             <p>Smith Smith</p>
-            <img src="images/amazon-icon.png">
+            <img src="../../public/images/amazon-icon.png">
           </div>
         </div>
         <div class="text-sm text-left">
@@ -183,7 +183,7 @@
         <div @click="recommend1=!recommend1">
           <img :src="recommend1?recommend_image1:recommend_image2" class="m-1 hover:opacity-40 cursor-pointer" />
         </div>
-        <img src="images/favorite-device-icon.png" class="m-1" />
+        <img src="../../public/images/favorite-device-icon.png" class="m-1" />
         <div @click="heart1=!heart1"><img :src="heart1?heart_image1:heart_image2"
             class="m-1 hover:opacity-40 cursor-pointer float-right" />
         </div>
@@ -192,7 +192,7 @@
         <div @click="recommend2=!recommend2">
           <img :src="recommend2?recommend_image1:recommend_image2" class="m-1 hover:opacity-40 cursor-pointer" />
         </div>
-        <img src="images/favorite-device-icon.png" class="m-1" />
+        <img src="../../public/images/favorite-device-icon.png" class="m-1" />
         <div @click="heart2=!heart2"><img :src="heart2?heart_image1:heart_image2"
             class="m-1 hover:opacity-40 cursor-pointer float-right" />
         </div>
@@ -217,10 +217,10 @@ export default {
       recommend1: true,
       heart2: false,
       recommend2: true,
-      heart_image1: "images/heart-icon.png",
-      heart_image2: "images/heart-icon-1.png",
-      recommend_image1: "images/recommend-icon-1.png",
-      recommend_image2: "images/recommend-icon.png",
+      heart_image1: "../../public/images/heart-icon-1.png",
+      heart_image2: "../../public/images/heart-icon.png",
+      recommend_image1: "../../public/images/recommend-icon.png",
+      recommend_image2: "../../public/images/recommend-icon-1.png",
     }
   },
   name: "detail-com",

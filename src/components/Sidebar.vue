@@ -9,11 +9,11 @@
           <div class="w-full">
             <div class="justify-between flex pl-8 pr-8 mb-4">
               <div class="text-left">
-                <img src="images/avatar-3.png" class="mb-4" />
+                <img src="../../public/images/avatar-3.png" class="mb-4" />
                 <p class="text-[#282828] my-1">Paulo Lingard</p>
                 <p class="text-[#282828] my-1">email@gmail.com</p>
               </div>
-              <span class="pt-4 cursor-pointer h-8" @click="toggleSidebar"><img src="images/close-fill.png" /></span>
+              <span class="pt-4 cursor-pointer h-8" @click="toggleSidebar"><img src="../../public/images/close-fill.png" /></span>
             </div>
             <hr />
           </div>
@@ -23,14 +23,14 @@
               <div class="text-[#282828] text-left pl-8 pr-8 ">
                 Categories
               </div>
-              <img src="images/expand_right.png" class="mr-4">
+              <img src="../../public/images/expand_right.png" class="mr-4">
             </div>
             <div class="my-3 py-3 flex justify-between cursor-pointer hover:bg-[#e8e8e8]"
             @click="()=>{openCategory=false;openFavorite=!openFavorite;chooseLanguage=false}">
               <div class="text-[#282828] text-left pl-8 pr-8">
                 Favorites
               </div>
-              <img src="images/expand_right.png" class="mr-4">
+              <img src="../../public/images/expand_right.png" class="mr-4">
             </div>
             <hr />
           </div>
@@ -61,14 +61,14 @@
           class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen sm:h-[880px] bg-side transition-all duration-300"
           :class="openCategory === true ? 'sm:w-64 w-full' : 'hidden'">
           <div class="text-left px-2 cursor-pointer w-1/2 py-4" @click="openCategory=!openCategory">
-            <img src="images/arrow.png" class="inline-block w-auto mb-1" />
+            <img src="../../public/images/arrow.png" class="inline-block w-auto mb-1" />
             <span class="text-[#3F37C9] ml-2">Categories</span>
           </div>
           <hr />
           <div>
             <div class="px-4 py-3">
               <div class="absolute left-0 inset-y-0 flex">
-                <img src="images/search-icon.png" class="fill-current ml-6 mt-24 h-5 w-5 text-gray-400">
+                <img src="../../public/images/search-icon.png" class="fill-current ml-6 mt-24 h-5 w-5 text-gray-400">
               </div>
               <input class="w-full h-10 mt-1 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 pl-10"
                 type="search" name="search" id="search" placeholder="Search">
@@ -78,80 +78,80 @@
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               All Categories
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Laptops, tablets and
               computer equipment
             </div>
-            <img src="images/expand_right.png" class="mr-4 h-5 mt-2">
+            <img src="../../public/images/expand_right.png" class="mr-4 h-5 mt-2">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-1">
               Appliances for the kitchen
             </div>
-            <img src="images/expand_right.png" class="mr-4 h-5 mt-2">
+            <img src="../../public/images/expand_right.png" class="mr-4 h-5 mt-2">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               Appliances for the home
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Smart watches and gadgets
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-1">
               Televisions and multimedia
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 ">
               Game consoles and gaming
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               Photo and video
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               Beauty and health
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               Dishes
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               Household chemicals
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-2">
               Tools and auto goods
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goCategories">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8">
               Services, subscriptions and software product search
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-2 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-2 h-5">
           </div>
           <div class="text-left sm:pt-10 pt-16">
             <button class="text-slate-400 pl-8 pr-8 w-1/5 hover:text-slate-800" @click="logout">LogOut</button>
@@ -162,14 +162,14 @@
           class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen sm:h-[880px] bg-side transition-all duration-300"
           :class="openFavorite === true ? 'sm:w-64 w-full' : 'hidden'">
           <div class="text-left px-2 cursor-pointer w-1/2 py-4" @click="openFavorite=!openFavorite">
-            <img src="images/arrow.png" class="inline-block w-auto mb-1" />
+            <img src="../../public/images/arrow.png" class="inline-block w-auto mb-1" />
             <span class="text-[#3F37C9] ml-2">Favorites</span>
           </div>
           <hr />
           <div>
             <div class="px-4 py-3">
               <div class="absolute left-0 inset-y-0 flex">
-                <img src="images/search-icon.png" class="fill-current ml-6 mt-24 h-5 w-5 text-gray-400">
+                <img src="../../public/images/search-icon.png" class="fill-current ml-6 mt-24 h-5 w-5 text-gray-400">
               </div>
               <input class="w-full h-10 mt-1 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 pl-10"
                 type="search" name="search" id="search" placeholder="Search">
@@ -179,13 +179,13 @@
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-1">
               All Favorites
             </div>
-            <img src="images/expand_right.png" class="mr-4 mt-1 h-5">
+            <img src="../../public/images/expand_right.png" class="mr-4 mt-1 h-5">
           </div>
           <div class="py-2 flex justify-between cursor-pointer hover:bg-[#e8e8e8]" @click="goFavorite">
             <div class="text-[#282828] text-sm text-left pl-8 pr-8 pt-1">
               Your Favorites
             </div>
-            <img src="images/expand_right.png" class="mr-4 h-5 mt-1">
+            <img src="../../public/images/expand_right.png" class="mr-4 h-5 mt-1">
           </div>
         </div>
 
@@ -193,14 +193,14 @@
           class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen bg-side transition-all duration-300"
           :class="chooseLanguage === true ? 'sm:w-64 w-full' : 'hidden'">
           <div class="text-left px-2 cursor-pointer w-1/2 py-4" @click="chooseLanguage=!chooseLanguage">
-            <img src="images/arrow.png" class="inline-block w-auto mb-1" />
+            <img src="../../public/images/arrow.png" class="inline-block w-auto mb-1" />
             <span class="text-[#3F37C9] ml-2">Categories</span>
           </div>
           <hr />
           <div>
             <div class="px-4 py-3">
               <div class="absolute left-0 inset-y-0 flex">
-                <img src="images/search-icon.png" class="fill-current ml-6 mt-24 h-5 w-5 text-gray-400">
+                <img src="../../public/images/search-icon.png" class="fill-current ml-6 mt-24 h-5 w-5 text-gray-400">
               </div>
               <input class="w-full h-10 mt-1 border rounded p-2 outline-none focus:shadow-outline bg-slate-50 pl-10"
                 type="search" name="search" id="search" placeholder="Search">

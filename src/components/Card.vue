@@ -13,7 +13,7 @@
       <div class="col-span-5 flex justify-between text-base"><span>{{product.price}}</span><span>Apple</span></div>
     </div>
     <div class="grid grid-rows-2 grid-flow-col gap-2">
-      <circle-progress :percent="product.percent" class="row-span-2 mt-3" :size="50" :border-width="5" :fill-color="(function(){
+      <circle-progress :percent="product.percent" class="row-span-2 mt-3" :size="60" :border-width="5" :fill-color="(function(){
       if(product.percent>60){
         return color1;
       } 
@@ -41,13 +41,13 @@ import CircleProgress from "vue3-circle-progress";
 export default {
   data() {
     return {
-      color1: 'green',
-      color2: 'yellow',
-      color3: 'red',
+      color1: '#00BF04',
+      color2: '#FF7A00',
+      color3: '#FF2E00',
       heart: this.product.heart,
       recommend: this.product.recommend,
-      heart_image1:"images/heart-icon.png", 
-      heart_image2: "images/heart-icon-1.png",
+      heart_image1:"images/heart-icon-1.png", 
+      heart_image2: "images/heart-icon.png",
       recommend_image1: "images/recommend-icon-1.png",
       recommend_image2 : "images/recommend-icon.png",
     }
@@ -57,8 +57,15 @@ export default {
   components: { CircleProgress },
 }
 </script>
+
 <style>
-/* .current-counter{
-  margin-top: 15px;
-} */
+.current-counter{ 
+    font-size: 20px !important;
+}
+@media only screen and (max-width: 556px){
+  .current-counter{ 
+    font-size: 14px !important;
+  }
+}
+
 </style>

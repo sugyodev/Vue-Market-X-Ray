@@ -32,7 +32,8 @@ const routes = [
     layout: 'welcome'
   },
   {
-    path: "/product",
+    name: 'product',
+    path: "/product/:name",
     component: Product,
     layout: 'welcome'
   },

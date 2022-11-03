@@ -38,7 +38,8 @@
     "vue3-carousel": "^0.2.4",
     "vue3-circle-progress": "^1.0.7",
     "vuejs-overlay": "^0.0.28",
-    "vueperslides": "^3.4.2"
+    "vueperslides": "^3.4.2",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

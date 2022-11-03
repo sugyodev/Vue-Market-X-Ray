@@ -1,9 +1,8 @@
 <template>
     <Carousel>
-      <template #slides="{ slidesCount }" >
-        <Slide v-for="(image, index) in images" :key="image.id">
+      <template >
+        <Slide v-for="image in images" :key="image.id">
           <img :src="image.url" />
-          <button v-if="slidesCount > 1" @click="deleteImage(index)">x</button>
         </Slide>
       </template>
   
@@ -14,12 +13,11 @@
   </template>
   
   <script>
-  import { defineComponent } from "vue";
-  import { Carousel, Slide } from "vue3-carousel";
+  import { Carousel, Slide, Navigation } from "vue3-carousel";
   
   import "vue3-carousel/dist/carousel.css";
   
-  export default defineComponent({
+  export default{
     name: "Basic-Carousel",
     props: {
       images: Array,
@@ -27,17 +25,8 @@
     components: {
       Carousel,
       Slide,
-    //   Pagination,
-    //   Navigation,
-    },
-  
-    // setup(props, { emit }) {
-    //   const { images } = toRefs(props);
-  
-    //   const deleteImage = (index) => emit("delete-image", index);
-  
-    //   return { images, deleteImage };
-    // },
-  });
+      Navigation
+    }
+  };
   </script>
   
