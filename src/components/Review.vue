@@ -3,7 +3,7 @@
     <div class="flex justify-between border-slate-200 p-2">
       <div class="">
         <div class="inline-block">
-          <img src="images/avatar-1.png" />
+          <img src="../../public/images/avatar-1.png" />
         </div>
         <div class="inline-block ml-4">
           <h1 class="font-bold">{{review.username}}</h1>
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div>
-        <img src="images/ebay-icon.png"/>
+        <img src="../../public/images/ebay-icon.png"/>
       </div>
     </div>
     <div class="m-3"><img src="images/rate.png" /></div>

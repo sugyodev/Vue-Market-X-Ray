@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-2xl mx-auto bg-[#F7F8FC] p-4 grid-rows-2 gap-5 rounded-lg">
     <div class="grid grid-rows-3 grid-flow-col">
-      <div class="row-span-4"><img src="images/favorite-device-icon.png" /></div>
+      <div class="row-span-4 cursor-pointer"><img src="images/favorite-device-icon.png" @click="goProduct"/></div>
       <div class="col-span-5"><span class="text-sm">{{product.name}}</span>
         <span class="float-right m-1 cursor-pointer hover:opacity-40" @click="heart=!heart"><img :src="heart?heart_image1:heart_image2" /></span>
         <span class="float-right m-1 cursor-pointer hover:opacity-40" @click="recommend=!recommend"><img :src="recommend?recommend_image1:recommend_image2" /></span>
@@ -52,6 +52,11 @@ export default {
       recommend_image2 : "images/recommend-icon.png",
     }
   },
+  methods:{
+    goProduct:function(){
+      this.$router.push('/product');
+    }
+  },
   name: 'card-com',
   props: { product: {} },
   components: { CircleProgress },
@@ -59,13 +64,5 @@ export default {
 </script>
 
 <style>
-.current-counter{ 
-    font-size: 20px !important;
-}
-@media only screen and (max-width: 556px){
-  .current-counter{ 
-    font-size: 14px !important;
-  }
-}
 
 </style>

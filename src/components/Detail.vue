@@ -15,7 +15,7 @@
           class="bg-[#449DD1] circle-tooltip border-0 mr-8 block z-50 font-normal leading-normal text-white text-sm text py-3 px-6 rounded">
           An amazing X Rank <br /> Score!!<br />Other users <br /> loved this one
         </div>
-        <circle-progress :percent="85" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
+        <circle-progress :percent="85" class="row-span-2 mt-3 mr-8 circle-custom-detail" :fill-color="color" :size="180" :border-width="24"
           :border-bg-width="0" :show-percent="true" />
       </div>
     </div>
@@ -180,20 +180,20 @@
     </div>
     <div class="mt-2 w-full grid sm:grid-cols-4 grid-cols-2">
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <div @click="recommend1=!recommend1">
-          <img :src="recommend1?recommend_image1:recommend_image2" class="m-1 hover:opacity-40 cursor-pointer" />
+        <div>
+          <img src="../../public/images/recommend-icon.png" class="m-1 hover:opacity-40 cursor-pointer" />
         </div>
         <img src="../../public/images/favorite-device-icon.png" class="m-1" />
-        <div @click="heart1=!heart1"><img :src="heart1?heart_image1:heart_image2"
+        <div><img src="../../public/images/heart-icon.png"
             class="m-1 hover:opacity-40 cursor-pointer float-right" />
         </div>
       </div>
       <div class="grid grid-cols-3 m-1 bg-slate-100 rounded p-2">
-        <div @click="recommend2=!recommend2">
-          <img :src="recommend2?recommend_image1:recommend_image2" class="m-1 hover:opacity-40 cursor-pointer" />
+        <div>
+          <img src="../../public/images/recommend-icon.png" class="m-1 hover:opacity-40 cursor-pointer" />
         </div>
         <img src="../../public/images/favorite-device-icon.png" class="m-1" />
-        <div @click="heart2=!heart2"><img :src="heart2?heart_image1:heart_image2"
+        <div><img src="../../public/images/heart-icon.png"
             class="m-1 hover:opacity-40 cursor-pointer float-right" />
         </div>
       </div>
@@ -213,10 +213,10 @@ export default {
     return {
       color: "#00BF04",
       tooltipShow: false,
-      heart1: false,
-      recommend1: true,
-      heart2: false,
-      recommend2: true,
+      // heart1: false,
+      // recommend1: true,
+      // heart2: false,
+      // recommend2: true,
       heart_image1: "../../public/images/heart-icon-1.png",
       heart_image2: "../../public/images/heart-icon.png",
       recommend_image1: "../../public/images/recommend-icon.png",
@@ -244,8 +244,8 @@ export default {
 };
 </script>
 <style>
-.current-counter {
-  font-size: 30px;
+.circle-custom-detail .current-counter{
+  font-size: 36px !important;
   font-weight: 600;
 }
 

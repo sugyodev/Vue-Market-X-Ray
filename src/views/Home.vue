@@ -14,8 +14,7 @@
     </div>
     <p class="text-left text-sm mb-6">You can use an <a href="#" class="text-[#449dd1]">Amazon</a> or <a href="#"
         class="text-[#449dd1]">Ebay</a> link</p>
-    <img src="images/banner.png" class="w-full sm:m-2" />
-    <!-- <Carousel :images="images" class="w-full h-16 border" /> -->
+    <Carousel class="border" :name="'home'"/>
     <div class="tab flex flex-wrap mt-2">
       <div class="w-full">
         <ul class="flex mb-0 list-none grid grid-cols-3 rounded">
@@ -41,7 +40,7 @@
             </a>
           </li>
         </ul>
-        <div class="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full rounded">
           <div class="sm:px-4 py-5 flex-auto">
             <div class="tab-content tab-space">
               <div v-bind:class="{ 'hidden': openTab !== 1, 'block': openTab === 1 }">
@@ -105,7 +104,7 @@
   
 <script>
 import ScatterChart from '@/components/ScatterChart.vue';
-// import Carousel from '@/components/Carousel.vue';
+import Carousel from '@/components/Carousel.vue';
 
 export default {
   name: "home-page",
@@ -115,12 +114,6 @@ export default {
   data() {
     return {
       openTab: 1,
-      // images : [
-      // { id: 1, url: "https://picsum.photos/300/200?q=1" },
-      // { id: 2, url: "https://picsum.photos/300/200?q=2" },
-      // { id: 3, url: "https://picsum.photos/300/200?q=3" },
-      // { id: 4, url: "https://picsum.photos/300/200?q=4" },
-      // ],
     };
   },
   methods: {
@@ -137,12 +130,12 @@ export default {
       this.$router.push({name: 'product', params: { name: catename }});
     }
   },
-  components: { ScatterChart }
+  components: { ScatterChart, Carousel }
 }
 </script>
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 
 </style>
   

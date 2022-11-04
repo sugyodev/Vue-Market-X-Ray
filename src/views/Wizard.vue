@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade">
       <div v-if="isModalVisible">
-        <div @click="onToggle" class="absolute bg-black opacity-70 inset-0 z-20 h-[1080px]"></div>
+        <div @click="onToggle" class="absolute bg-black opacity-[0.55] inset-0 z-20 h-[1080px]"></div>
         <div
           class="w-full sm:w-1/2 px-4 fixed bottom-52 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
           <div class="py-4 px-3 bg-white rounded w-3/5 sm:w-56 text-sm rounded-lg sm:ml-48 mb-4 msg-box text-left">

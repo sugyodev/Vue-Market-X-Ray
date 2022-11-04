@@ -30,18 +30,33 @@ export default {
   data: function () {
     return {
       openSidebar: false,
+      TopScroll: window.pageYOffset || document.documentElement.scrollTop,
+      LeftScroll: window.pageXOffset || document.documentElement.scrollLeft,
     };
   },
   methods: {
     toggleSidebar: function () {
       this.openSidebar = !this.openSidebar;
+      if (this.openSidebar && window.innerWidth <= 500) {
+        this.functiondisable();
+      } else {
+        window.onscroll = function () {}
+      }
     },
     disableSidebar: function () {
-      if (window.innerWidth <= 1000) this.openSidebar = false;
+      if (window.innerWidth <= 1000) {
+        this.openSidebar = false;
+        window.onscroll = function () {}
+      }
     },
     handleResize: function () {
-      window.innerWidth <= 1000 && (this.openSidebar = false);
-      window.innerWidth > 1000 && (this.openSidebar = true);
+      if(window.innerWidth <= 1000) { this.openSidebar = false;}
+      if(window.innerWidth > 1000) {this.openSidebar = true;window.onscroll = function () {}}
+    },
+    functiondisable() {
+      window.onscroll = function () {
+        window.scrollTo(this.LeftScroll, this.TopScroll);
+      };
     }
   },
   mounted: function () {

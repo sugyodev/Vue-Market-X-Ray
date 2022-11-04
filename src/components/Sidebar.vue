@@ -58,7 +58,7 @@
         </div>
 
         <div
-          class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen sm:h-[880px] bg-side transition-all duration-300"
+          class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:left-64 sm:ml-2 sm:mt-14 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen sm:h-[1000px] bg-side transition-all duration-300"
           :class="openCategory === true ? 'sm:w-64 w-full' : 'hidden'">
           <div class="text-left px-2 cursor-pointer w-1/2 py-4" @click="openCategory=!openCategory">
             <img src="../../public/images/arrow.png" class="inline-block w-auto mb-1" />

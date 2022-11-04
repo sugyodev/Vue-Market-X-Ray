@@ -38,6 +38,12 @@ const routes = [
     layout: 'welcome'
   },
   {
+    name: 'product',
+    path: "/product",
+    component: Product,
+    layout: 'welcome'
+  },
+  {
     path: "/wizard",
     component: Wizard,
     layout: 'welcome'

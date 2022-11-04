@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade">
       <div v-if="isModalVisible">
-        <div @click="onToggle" class="absolute bg-black opacity-70 inset-0 z-20 z-20 h-[1080px]"></div>
+        <div @click="onToggle" class="absolute bg-black opacity-[0.55] inset-0 z-20 z-20 h-[1080px]"></div>
         <div
           class="w-full sm:w-1/3 px-8 fixed bottom-48 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
           <div class="py-4 px-6 bg-white rounded w-48 rounded-lg mb-4 text-sm msg-box sm:ml-8">
@@ -16,7 +16,7 @@
   <div class="jastify-center w-full px-3 text-left border-0 sm:p-8">
     <div class="flex justify-between">
       <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-10 ml-1" @click="this.$router.go(-1)"/>
-      <button class=" text-[#866FAC] text-xl sm:text-5xl font-bold w-3/4 text-left ml-8">Smart Phones</button>
+      <button class="text-[#866FAC] text-xl sm:text-2xl font-bold w-3/4 text-left ml-8 cursor-default">Smart Phones</button>
       <img src="images/logo-icon.png" class="float-right sm:mr-24 cursor-pointer" @click="goHome">
     </div>
     <div class="w-full sm:grid sm:grid-cols-2 ">

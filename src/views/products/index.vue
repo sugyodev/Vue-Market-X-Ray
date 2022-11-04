@@ -2,7 +2,7 @@
   <div v-if="openAddreview" class="add-review sm:p-20 p-2 w-full">
     <div class="grid grid-cols-2">
       <button class="text-2xl font-bold" @click="openAddreview=!openAddreview">Reviews</button>
-      <div class="text-right"><img src="images/about-img-2.png" class="float-right" /></div>
+      <div class="text-right"><img src="../../../public/images/about-img-2.png" class="float-right" /></div>
     </div>
     <div>
       <h1 class="w-full text-3xl">Write Review</h1>
@@ -15,14 +15,14 @@
   </div>
   <div v-else class="p-4 sm:px-8">
     <div class="flex justify-between">
-      <img src="../../../public/images/left-direct-icon.png" class="cursor-pointer w-2 h-4 mt-3 ml-3" @click="this.$router.go(-1)"/>
-      <button class=" text-[#866FAC] text-xl font-bold w-3/4 text-left ml-1">{{name}}</button>
-      <img src="../../../public/images/heart-icon.png" class="float-right w-10 cursor-pointer" @click="goHome">
+      <img src="../../../public/images/left-direct-icon.png" class="cursor-pointer w-2 h-3 mt-5 ml-3" @click="this.$router.go(-1)"/>
+      <button class=" text-lg w-3/4 text-left ml-1 text-left">{{name?name:'Laptop Acer Aspire7'}}<br/><span class="text-sm">Charcoal Black</span></button>
+      <img src="../../../public/images/heart-icon.png" class="float-right w-10 h-10 cursor-pointer" @click="goHome">
     </div>
     <div class="flex justify-between">
       <div>
         <!-- <img src="images/percent.png" class="" /> -->
-        <circle-progress :percent="92" class="row-span-2 mt-3 mr-8" :fill-color="color" :size="130" :border-width="20"
+        <circle-progress :percent="92" class="row-span-2 mt-3 mr-8 text-lg circle-custom" :fill-color="color" :size="160" :border-width="24"
           :border-bg-width="0" :show-percent="true" />
       </div>
       <div>
@@ -30,9 +30,7 @@
       </div>
     </div>
     <div class="grid sm:grid-cols-2">
-      <div class="slider">
-        <img src="../../../public/images/product-pc-icon.png" />
-      </div>
+      <Carousel :name="'product'"/>
       <div class="grid grid-rows-2xl mt-2">
         <p class="sm:p-16 p-2 text-sm">
           Screen 15.6" IPS (1920x1080) Full HD, matte / AMD Ryzen 5 5500U (2.1 — 4.0 GHz) / RAM 8 GB / SSD 512 GB /
@@ -60,28 +58,28 @@
       <div class="w-full">
         <ul class="flex mb-0 list-none flex-wrap flex-row rounded">
           <li class="-mb-px last:mr-0 flex-auto text-center">
-            <a class="text-sm font-bold px-5 py-3 m-1 shadow-lg rounded-lg block leading-normal"
+            <a class="text-sm font-bold px-5 py-3 m-1 border rounded-lg block leading-normal"
               v-on:click="toggleTabs(1)"
               v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 1, 'text-white bg-[#3F37C9]': openTab === 1}">
               Details
             </a>
           </li>
           <li class="-mb-px last:mr-0 flex-auto text-center">
-            <a class="text-sm font-bold px-5 py-3 m-1 shadow-lg rounded-lg block leading-normal"
+            <a class="text-sm font-bold px-5 py-3 m-1 border rounded-lg block leading-normal"
               v-on:click="toggleTabs(2)"
               v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 2, 'text-white bg-[#3F37C9]': openTab === 2}">
               Spec
             </a>
           </li>
           <li class="-mb-px last:mr-0 flex-auto text-center">
-            <a class="text-sm font-bold px-5 py-3 m-1 shadow-lg rounded-lg block leading-normal"
+            <a class="text-sm font-bold px-5 py-3 m-1 border rounded-lg block leading-normal"
               v-on:click="toggleTabs(3)"
               v-bind:class="{'text-slate-400 bg-slate-50': openTab !== 3, 'text-white bg-[#3F37C9]': openTab === 3}">
               Reviews
             </a>
           </li>
         </ul>
-        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+        <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 rounded">
           <div class="sm:px-4 py-5 flex-auto">
             <div class="tab-content tab-space">
               <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
@@ -111,6 +109,8 @@ import Spec from '../../components/Spec.vue'
 import Rate from '../../components/Rate.vue'
 import Detail from '../../components/Detail.vue'
 import CircleProgress from "vue3-circle-progress";
+import Carousel from '@/components/Carousel.vue';
+
 
 export default {
   name: 'product-page',
@@ -119,7 +119,8 @@ export default {
     Spec,
     Detail,
     Rate,
-    CircleProgress
+    CircleProgress,
+    Carousel
   },
   props: {
     msg: String
@@ -163,9 +164,11 @@ export default {
       this.rating = no;
     }
   },
-  mounted:function(){
-    console.log(this.$route.params.name);
-  }
 }
 </script>
-  
+<style>
+.circle-custom .current-counter{
+  font-size: 30px !important;
+  font-weight: 600;
+}
+</style>
