@@ -34,6 +34,7 @@ export default {
 }
 </script>
 <style>
+
 .carousel__viewport ol li{
   width: 100% !important;
 }

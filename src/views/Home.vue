@@ -14,7 +14,7 @@
     </div>
     <p class="text-left text-sm mb-6">You can use an <a href="#" class="text-[#449dd1]">Amazon</a> or <a href="#"
         class="text-[#449dd1]">Ebay</a> link</p>
-    <Carousel class="border" :name="'home'"/>
+    <Carousel :name="'home'"/>
     <div class="tab flex flex-wrap mt-2">
       <div class="w-full">
         <ul class="flex mb-0 list-none grid grid-cols-3 rounded">
