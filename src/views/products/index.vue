@@ -25,7 +25,7 @@
         <circle-progress :percent="92" class="row-span-2 mt-3 mr-8 text-lg circle-custom" :fill-color="color" :size="160" :border-width="24"
           :border-bg-width="0" :show-percent="true" />
       </div>
-      <div>
+      <div class="cursor-pointer" @click="goHome">
         <img src="../../../public/images/about-img-2.png" />
       </div>
     </div>
@@ -159,6 +159,9 @@ export default {
   methods: {
     toggleTabs: function (tabNumber) {
       this.openTab = tabNumber
+    },
+    goHome:function(){
+      this.$router.push('/home');
     },
     addRate: function(no){
       this.rating = no;
