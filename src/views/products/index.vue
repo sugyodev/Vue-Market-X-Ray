@@ -17,7 +17,7 @@
     <div class="flex justify-between">
       <img src="../../../public/images/left-direct-icon.png" class="cursor-pointer w-2 h-3 mt-5 ml-3" @click="this.$router.go(-1)"/>
       <button class=" text-lg w-3/4 text-left ml-1 text-left">{{name?name:'Laptop Acer Aspire7'}}<br/><span class="text-sm">Charcoal Black</span></button>
-      <img src="../../../public/images/heart-icon.png" class="float-right w-10 h-10 cursor-pointer" @click="goHome">
+      <img src="../../../public/images/heart-icon.png" class="float-right w-10 h-10 cursor-pointer">
     </div>
     <div class="flex justify-between">
       <div>

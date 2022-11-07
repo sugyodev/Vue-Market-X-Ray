@@ -7,12 +7,12 @@
         <form class="mb-4" action="/" method="post">
           <div class="mb-4 md:w-full">
             <label for="email" class="block text-md text-left mb-1">Email</label>
-            <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50 text-lg" type="email"
+            <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50" type="email"
               name="email" id="email" placeholder="Username or Email">
           </div>
           <div class="mb-6 md:w-full">
             <label for="password" class="block text-md text-left mb-1">Password</label>
-            <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50 text-lg"
+            <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50"
               type="password" name="password" id="password" placeholder="Password">
           </div>
           <button

@@ -13,7 +13,7 @@
       <div ref="circlebtnRef" v-on:mouseenter="toggleTooltip()" v-on:mouseleave="toggleTooltip()">
         <div ref="circletooltipRef" v-bind:class="{'hidden': !tooltipShow, 'block': tooltipShow}"
           class="bg-[#449DD1] circle-tooltip border-0 mr-8 block z-50 font-normal leading-normal text-white text-sm text py-3 px-6 rounded">
-          An amazing X Rank <br /> Score!!<br />Other users <br /> loved this one
+          An amazing 85 Rank <br /> Score!!<br />Other users <br /> loved this one
         </div>
         <circle-progress :percent="85" class="row-span-2 mt-3 mr-8 circle-custom-detail" :fill-color="color" :size="180" :border-width="24"
           :border-bg-width="0" :show-percent="true" />
@@ -24,7 +24,6 @@
         Category Comparison
       </div>
       <div class="-mt-12">
-        <!-- <img src="images/radar.png"> -->
         <RadarChart class="mr-2" />
       </div>
     </div>
