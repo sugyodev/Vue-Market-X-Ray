@@ -8,17 +8,17 @@
           <div class="mb-4 md:w-full">
             <label for="username" class="block text-md text-left mb-1">Username</label>
             <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50" type="text"
-              name="username" id="username" placeholder="Username">
+              name="username" id="username" placeholder="Username" v-model="username">
           </div>
           <div class="mb-4 md:w-full">
             <label for="email" class="block text-md text-left mb-1">Email</label>
             <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50" type="email"
-              name="email" id="email" placeholder="Email">
+              name="email" id="email" placeholder="Email" v-model="password">
           </div>
           <div class="mb-6 md:w-full">
             <label for="password" class="block text-md text-left mb-1">Password</label>
             <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50" type="password"
-              name="password" id="password" placeholder="Password">
+              name="password" id="password" placeholder="Password" v-model="cpassword">
           </div>
           <div class="mb-6 md:w-full">
             <label for="phone" class="block text-md text-left mb-1">Phone number</label>
@@ -47,6 +47,13 @@
   
 <script>
 export default {
+  data() {
+    return {
+      username: '',
+      password: '',
+      cpassword:''
+    }
+  },
   name: 'sign-up',
   methods: {
     signin: function () {
