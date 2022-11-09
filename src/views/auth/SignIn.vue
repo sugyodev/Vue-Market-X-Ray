@@ -4,19 +4,20 @@
     <p class="text-center text-lg mt-3">Login in with your account</p>
     <div class="flex items-center w-full">
       <div class="w-full bg-white rounded p-2 sm:p-8 m-4 sm:max-w-md md:mx-auto">
-        <form class="mb-4" action="/" method="post">
+        <form class="mb-4">
           <div class="mb-4 md:w-full">
             <label for="email" class="block text-md text-left mb-1">Email</label>
             <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50" type="email"
-              name="email" id="email" placeholder="Username or Email">
+              name="email" id="email" placeholder="Username or Email" v-model="username">
           </div>
           <div class="mb-6 md:w-full">
             <label for="password" class="block text-md text-left mb-1">Password</label>
-            <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50"
-              type="password" name="password" id="password" placeholder="Password">
+            <input class="w-full border rounded p-2 outline-none focus:shadow-outline bg-slate-50" type="password"
+              name="password" id="password" placeholder="Password" v-model="password">
           </div>
           <button
-            class="bg-green-500 hover:bg-green-700 text-white bg-sky-600 uppercase text-sm font-semibold px-4 py-3 rounded w-full" @click="gohome">Proceed</button>
+            class="bg-green-500 hover:bg-green-700 text-white bg-sky-600 uppercase text-sm font-semibold px-4 py-3 rounded w-full"
+            @click="gohome">Proceed</button>
         </form>
         <span class="text-neutral-600 text-center text-md mr-2" href="/login">Don't have an account?</span><button
           class="text-sky-600 text-lg" @click="signup">Sign Up</button>
@@ -35,13 +36,19 @@
 <script>
 export default {
   name: 'sign-in',
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
   methods: {
     signup: function () {
       this.$router.push('/signup');
     },
     gohome: function () {
       this.$router.push('/home');
-    }
+    },
   },
   props: {
     msg: String
