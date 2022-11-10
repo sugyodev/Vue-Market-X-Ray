@@ -2,9 +2,9 @@
   <div id="app">
     <transition name="fade">
       <div v-if="isModalVisible">
-        <div @click="onToggle" class="absolute bg-black opacity-[0.55] inset-0 z-20 z-20 h-[1080px]"></div>
+        <div @click="onToggle" class="absolute bg-black opacity-[0.55] inset-0 z-20 z-20 h-full"></div>
         <div
-          class="w-full sm:w-1/3 px-8 fixed bottom-48 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20 shadow-lg">
+          class="w-full sm:w-1/3 px-8 fixed bottom-48 sm:bottom-28 sm:inline-block mx-auto my-auto rounded-xl h-80 z-20">
           <div class="py-4 px-6 bg-white rounded w-48 rounded-lg mb-4 text-sm msg-box sm:ml-8">
             I think these are <br />the best for you
           </div>
@@ -15,8 +15,10 @@
   </div>
   <div class="jastify-center w-full px-3 text-left border-0 sm:p-8">
     <div class="flex justify-between">
-      <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-10 ml-1" @click="this.$router.go(-1)"/>
-      <button class="text-[#866FAC] text-xl sm:text-2xl font-bold w-3/4 text-left ml-8 cursor-default">Smart Phones</button>
+      <img src="images/left-direct-icon.png" class="cursor-pointer w-2 absolute mt-10 ml-1"
+        @click="this.$router.go(-1)" />
+      <button class="text-[#866FAC] text-xl sm:text-2xl font-bold w-3/4 text-left ml-8 cursor-default">Smart
+        Phones</button>
       <img src="images/logo-icon.png" class="float-right sm:mr-24 cursor-pointer" @click="goHome">
     </div>
     <div class="w-full sm:grid sm:grid-cols-2 ">
@@ -70,30 +72,37 @@
     </div>
   </div>
 </template>
-<script setup>
-import { ref } from 'vue'
-import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/vue'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
-
-const people = [
-  {
-    id: 1,
-    name: 'Sort by',
-  },
-  {
-    id: 2,
-    name: 'Price',
-  },
-  {
-    id: 3,
-    name: 'X Rank',
-  },
-]
-
-const selected = ref(people[0])
-</script>
 <script>
-import Card from '../../components/Card.vue'
+import Card from '../../components/Card.vue';
+const data1 = [
+  {
+    no: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 77
+  },
+  {
+    no: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 87
+  },
+  {
+    no: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 32
+  },
+  {
+    no: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 57
+  },
+  {
+    no: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 91
+  },
+  {
+    no: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 34
+  },
+  {
+    no: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 12
+  },
+  {
+    no: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 96
+  },
+  {
+    no: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 88
+  }
+]
 export default {
   name: 'category-page',
   components: {
@@ -127,47 +136,41 @@ export default {
     }
   },
   mounted: function () {
-    this.functiondisable();
+    this.products = data1;
   },
   data() {
     return {
       TopScroll: window.pageYOffset || document.documentElement.scrollTop,
       LeftScroll: window.pageXOffset || document.documentElement.scrollLeft,
       isOpen: true,
-      products: [
-        {
-          no: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 77
-        },
-        {
-          no: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 87
-        },
-        {
-          no: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 32
-        },
-        {
-          no: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 57
-        },
-        {
-          no: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 91
-        },
-        {
-          no: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 34
-        },
-        {
-          no: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 12
-        },
-        {
-          no: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 96
-        },
-        {
-          no: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 88
-        }
-      ]
+      products:[]
     }
   }
 }
 </script>
-    
+  
+<script setup>
+import { ref } from 'vue'
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/vue'
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
+
+const people = [
+  {
+    id: 1,
+    name: 'Sort by',
+  },
+  {
+    id: 2,
+    name: 'Price',
+  },
+  {
+    id: 3,
+    name: 'X Rank',
+  },
+]
+
+const selected = ref(people[0])
+</script>
     <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 

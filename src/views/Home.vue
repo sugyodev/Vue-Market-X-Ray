@@ -105,6 +105,7 @@
 <script>
 import ScatterChart from '@/components/ScatterChart.vue';
 import Carousel from '@/components/Carousel.vue';
+// import axios from '../HttpRequest';
 
 export default {
   name: "home-page",
@@ -130,6 +131,9 @@ export default {
       this.$router.push({name: 'product', params: { name: catename }});
     }
   },
+  mounted:function(){
+    
+  },  
   components: { ScatterChart, Carousel }
 }
 </script>

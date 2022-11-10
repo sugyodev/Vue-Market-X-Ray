@@ -26,11 +26,7 @@ export default {
     Carousel,
     Slide,
     Pagination,
-    // Navigation,
   },
-  mounted:function(){
-    console.log(this.name);
-  }
 }
 </script>
 <style>

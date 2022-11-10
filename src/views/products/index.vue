@@ -6,7 +6,6 @@
     </div>
     <div>
       <h1 class="w-full text-3xl">Write Review</h1>
-      <!-- <img src="images/rate.png" class="w-auto m-4" /> -->
         <Rate v-model="rating" :value="rating" :addRate="addRate"/>
       <input class="p-2 bg-slate-100 rounded w-full my-3" placeholder="Smith" />
       <textarea placeholder="Add a component" class="p-4 bg-slate-100 rounded w-full my-2 h-48"></textarea>
@@ -16,12 +15,11 @@
   <div v-else class="p-4 sm:px-8">
     <div class="flex justify-between">
       <img src="../../../public/images/left-direct-icon.png" class="cursor-pointer w-2 h-3 mt-5 ml-3" @click="this.$router.go(-1)"/>
-      <button class=" text-lg w-3/4 text-left ml-1 text-left">{{name?name:'Laptop Acer Aspire7'}}<br/><span class="text-sm">Charcoal Black</span></button>
+      <button class=" text-lg w-3/4 text-left ml-1 text-left cursor-default">{{name?name:'Laptop Acer Aspire7'}}<br/><span class="text-sm">Charcoal Black</span></button>
       <img src="../../../public/images/heart-icon.png" class="float-right w-10 h-10 cursor-pointer">
     </div>
     <div class="flex justify-between">
       <div>
-        <!-- <img src="images/percent.png" class="" /> -->
         <circle-progress :percent="92" class="row-span-2 mt-3 mr-8 text-lg circle-custom" :fill-color="color" :size="160" :border-width="24"
           :border-bg-width="0" :show-percent="true" />
       </div>

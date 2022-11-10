@@ -50,7 +50,7 @@
       <h1 class="text-purple-800 text-left font-bold text-lg m-2">Processor</h1>
       <div class="p-1">
         <span class="float-left">Processor</span>
-        <span class="float-right w-1/2">{{spec.processor.processor}}</span>
+        <span class="float-right w-1/2 text-right">{{spec.processor.processor}}</span>
       </div>
       <div class="p-1">
         <span class="float-left">Operating System</span>

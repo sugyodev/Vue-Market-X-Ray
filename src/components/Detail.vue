@@ -45,13 +45,13 @@
       </div>
     </div>
 
-    <div class="flex justify-between">
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Network</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Design</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Size</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Bluetooth</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Memory</button>
-      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-1 sm:px-6 sm:py-3 text-[#282828]">Upgrade</button>
+    <div class="">
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-[2px] sm:px-6 sm:py-3 text-[#282828]">Network</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-[2px] sm:px-6 sm:py-3 text-[#282828]">Design</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-[2px] sm:px-6 sm:py-3 text-[#282828]">Size</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-[2px] sm:px-6 sm:py-3 text-[#282828]">Bluetooth</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-[2px] sm:px-6 sm:py-3 text-[#282828]">Memory</button>
+      <button class="text-xs rounded-lg bg-[#F7F8FC] p-1 px-2 ml-[2px] sm:px-6 sm:py-3 text-[#282828]">Upgrade</button>
     </div>
     <button class="text-left w-full text-[#866FAC] text-xs ml-2">*Common users’s interest</button>
 
@@ -212,10 +212,10 @@ export default {
     return {
       color: "#00BF04",
       tooltipShow: false,
-      // heart1: false,
-      // recommend1: true,
-      // heart2: false,
-      // recommend2: true,
+      heart1: false,
+      recommend1: true,
+      heart2: false,
+      recommend2: true,
       heart_image1: "../../public/images/heart-icon-1.png",
       heart_image2: "../../public/images/heart-icon.png",
       recommend_image1: "../../public/images/recommend-icon.png",

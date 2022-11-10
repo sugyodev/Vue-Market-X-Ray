@@ -2,7 +2,7 @@
   <div id="app">
     <transition name="fade">
       <div v-if="openSidebar">
-        <div @click="disableSidebar" class="absolute bg-black opacity-70 inset-0 z-20 sm:hidden"></div>
+        <div @click="disableSidebar" class="absolute bg-black opacity-70 inset-0 z-20 sm:hidden h-full"></div>
         <div
           class="flex shrink-0 flex-col w-4/5 sm:w-80 sm:relative sm:mt-4 absolute z-20 top-0 left-0 border bg-white sm:bg-slate-50 pt-2 h-screen bg-side transition-all duration-300"
           :class="openSidebar === true ? 'sm:w-64 w-full' : 'hidden'">
