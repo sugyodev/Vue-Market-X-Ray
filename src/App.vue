@@ -7,7 +7,7 @@
   <div class="flex">
     <Sidebar v-if="layout!=='auth'" :openSidebar="openSidebar" :disableSidebar="disableSidebar"
       :toggleSidebar="toggleSidebar" />
-    <router-view  :openFooter="openFooter"/>
+    <router-view />
   </div>
   <Footer v-if="layout!=='auth'" />
 

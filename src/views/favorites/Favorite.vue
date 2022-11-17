@@ -5,7 +5,7 @@
       <img src="images/about-img-2.png" class="float-right sm:mr-12 cursor-pointer" @click="gowizard">
     </div>
     <div class="sm:ml-8">
-      <div v-for="p in products" v-bind:key="p.no" class="w-full inline-block my-2">
+      <div v-for="p in products" v-bind:key="p.id" class="w-full inline-block my-2">
         <Card :product="p" />
       </div>
     </div>
@@ -28,31 +28,31 @@ export default {
     return {
       products: [
         {
-          no: 1, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 97
+          id: 1, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 97
         },
         {
-          no: 2, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 20
+          id: 2, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 20
         },
         {
-          no: 3, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 65
+          id: 3, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 65
         },
         {
-          no: 4, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 25
+          id: 4, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 25
         },
         {
-          no: 5, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 48
+          id: 5, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 48
         },
         {
-          no: 6, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 79
+          id: 6, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 79
         },
         {
-          no: 7, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 84
+          id: 7, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 84
         },
         {
-          no: 8, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 97
+          id: 8, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 97
         },
         {
-          no: 9, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 91
+          id: 9, name: 'Iphone XS Max', recommend: false, heart: true, filled: false, price: '$800', percent: 91
         }
       ]
     }

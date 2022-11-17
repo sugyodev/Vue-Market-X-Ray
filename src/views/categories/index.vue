@@ -40,12 +40,12 @@
               leave-to-class="opacity-0">
               <ListboxOptions
                 class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                <ListboxOption as="template" v-for="person in people" :key="person.id" :value="person"
+                <ListboxOption as="template" v-for="val in sort" :key="val.id" :value="val"
                   v-slot="{ active, selected }">
                   <li
                     :class="[active ? 'text-white bg-indigo-600' : 'text-gray-900', 'relative cursor-default select-none py-2 pl-3 pr-9']">
                     <div class="flex items-center">
-                      <span :class="[selected ? 'font-semibold' : 'font-normal', 'ml-3 block truncate']">{{ person.name
+                      <span :class="[selected ? 'font-semibold' : 'font-normal', 'ml-3 block truncate']">{{ val.name
                       }}</span>
                     </div>
 
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div>
-      <div v-for="p in products" v-bind:key="p.no" class="w-full sm:w-2/5 my-1 sm:mx-4 inline-block">
+      <div v-for="p in products" v-bind:key="p.id" class="w-full sm:w-2/5 my-1 sm:mx-4 inline-block">
         <Card :product="p" />
       </div>
     </div>
@@ -76,31 +76,31 @@
 import Card from '../../components/Card.vue';
 const data1 = [
   {
-    no: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 77
+    id: 1, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 77
   },
   {
-    no: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 87
+    id: 2, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 87
   },
   {
-    no: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 32
+    id: 3, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 32
   },
   {
-    no: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 57
+    id: 4, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 57
   },
   {
-    no: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 91
+    id: 5, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 91
   },
   {
-    no: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 34
+    id: 6, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 34
   },
   {
-    no: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 12
+    id: 7, name: 'Iphone XS Max', recommend: false, color: '#00BF04', filled: false, price: '$800', percent: 12
   },
   {
-    no: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 96
+    id: 8, name: 'Iphone XS Max', recommend: false, color: '#FF7A00', filled: false, price: '$800', percent: 96
   },
   {
-    no: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 88
+    id: 9, name: 'Iphone XS Max', recommend: false, color: '#FF2E00', filled: false, price: '$800', percent: 88
   }
 ]
 export default {
@@ -154,7 +154,7 @@ import { ref } from 'vue'
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/vue'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 
-const people = [
+const sort = [
   {
     id: 1,
     name: 'Sort by',
@@ -169,7 +169,7 @@ const people = [
   },
 ]
 
-const selected = ref(people[0])
+const selected = ref(sort[0])
 </script>
     <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>

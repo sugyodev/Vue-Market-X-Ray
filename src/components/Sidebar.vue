@@ -251,8 +251,8 @@ export default {
   name: "sidebar-component",
   props: {
     openSidebar: Boolean,
-    disableSidebar: function () { },
-    toggleSidebar: function () { }
+    disableSidebar: {},
+    toggleSidebar: {}
   },
   data: function () {
     return {
