@@ -13,6 +13,6 @@
 <script>
 export default {
     name: "StarRating",
-    props: { value: Number, addRate: function () { } }
+    props: { value: Number, addRate: { } }
 };
 </script>

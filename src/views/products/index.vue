@@ -1,5 +1,13 @@
 <template>
   <div v-if="openAddreview" class="add-review sm:p-20 p-2 w-full">
+    <div v-if="confirmReview" class="absolute bg-white border rounded p-4 top-[270px]">
+      <h1 class="text-[#282828] text-lg">Are you sure you want to reset your comment?</h1>
+      <p class="mt-3 text-[#757575] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <div class="flex justify-between mt-[24px]">
+        <button class="w-full text-[#B0BCE3] text-lg rounded-lg border py-[14px] mr-2">Cancel</button>
+        <button class="w-full bg-[#449DD1] rounded-lg text-white ml-2" @click="reset">Reset</button>
+      </div>
+    </div>
     <div class="grid grid-cols-2">
       <button class="text-2xl font-bold" @click="openAddreview=!openAddreview">Reviews</button>
       <div class="text-right"><img src="../../../public/images/about-img-2.png" class="float-right" /></div>
@@ -10,7 +18,7 @@
       <input class="p-2 bg-slate-100 rounded w-full my-3" placeholder="Smith" />
       <textarea placeholder="Add a component" class="p-4 bg-slate-100 rounded w-full my-2 h-48"></textarea>
     </div>
-    <button class="p-4 text-white text-lg bg-sky-600 rounded w-full mt-32">Proceed</button>
+    <button class="p-4 text-white text-lg bg-sky-600 rounded w-full mt-32" @click="submitReview">Proceed</button>
   </div>
   <div v-else class="p-4 sm:px-8">
     <div class="flex justify-between">
@@ -109,7 +117,6 @@ import Detail from '../../components/Detail.vue'
 import CircleProgress from "vue3-circle-progress";
 import Carousel from '@/components/Carousel.vue';
 
-
 export default {
   name: 'product-page',
   components: {
@@ -127,6 +134,7 @@ export default {
     return {
       name:this.$route.params.name,
       color: "#00BF04",
+      confirmReview: false,
       rating: 3,
       openTab: 1,
       openAddreview: false,
@@ -158,11 +166,17 @@ export default {
     toggleTabs: function (tabNumber) {
       this.openTab = tabNumber
     },
+    submitReview: function(){
+      this.confirmReview = true;
+    },
     goHome:function(){
       this.$router.push('/home');
     },
     addRate: function(no){
       this.rating = no;
+    },
+    reset: function(){
+      this.confirmReview = false;
     }
   },
 }

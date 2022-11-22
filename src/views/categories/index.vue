@@ -40,6 +40,7 @@
               leave-to-class="opacity-0">
               <ListboxOptions
                 class="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                <span class="text-gray-900 ml-3 block truncate">Sort by</span>
                 <ListboxOption as="template" v-for="val in sort" :key="val.id" :value="val"
                   v-slot="{ active, selected }">
                   <li
@@ -157,14 +158,10 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/20/solid'
 const sort = [
   {
     id: 1,
-    name: 'Sort by',
-  },
-  {
-    id: 2,
     name: 'Price',
   },
   {
-    id: 3,
+    id: 2,
     name: 'X Rank',
   },
 ]
