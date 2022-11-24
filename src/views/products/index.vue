@@ -4,7 +4,7 @@
       <h1 class="text-[#282828] text-lg">Are you sure you want to reset your comment?</h1>
       <p class="mt-3 text-[#757575] text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
       <div class="flex justify-between mt-[24px]">
-        <button class="w-full text-[#B0BCE3] text-lg rounded-lg border py-[14px] mr-2">Cancel</button>
+        <button class="w-full text-[#B0BCE3] text-lg rounded-lg border py-[14px] mr-2" @click="reset">Cancel</button>
         <button class="w-full bg-[#449DD1] rounded-lg text-white ml-2" @click="reset">Reset</button>
       </div>
     </div>
